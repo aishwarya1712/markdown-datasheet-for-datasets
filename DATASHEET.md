@@ -32,23 +32,32 @@ Organization: *University of California, Berkeley*
 
 1. **What do the instances that comprise the dataset represent (e.g. documents, photos, people, countries)?** Are there multiple types of instances (e.g. movies, users, and ratings; people and interactions between them; nodes and edges)? Please provide a description.
 
-	The Company Dataset is stored in an Elasticsearch database. Each instance corresponds to a company. Each company is stored as document in a collection. The company attributes are saved in the form of JSON key-value pairs. 
+	The Company Dataset is stored in an Elasticsearch database. Each instance corresponds to a company. Each company is stored as document in a collection. The company attributes are saved in the form of JSON key-value pairs.
 
-2. **How many instances are there in total (of each type, if appropriate)?**
+	There is also a Person Dataset linked to the Company Dataset. Each record in the Person Dataset represents a person, an employee or a contact working at a company. 
+
+3. **How many instances are there in total (of each type, if appropriate)?**
 
 	There are 12 million unique records of companies in the Company Dataset.
+	There are 3,199,277,517 unique records of people in the Person Dataset. 
 
-3. **Does the dataset contain all possible instances or is it a sample (not necessarily random) of instances from a larger set?** If the dataset is a sample, then what is the larger set? Is the sample representative of the larger set (e.g. geographic coverage)? If so, please describe how this representativeness was validated/verified. If it is not representative of the larger set, please describe why not (e.g. to cover a more diverse range of instances, because instances were withheld or unavailable).
+5. **Does the dataset contain all possible instances or is it a sample (not necessarily random) of instances from a larger set?** If the dataset is a sample, then what is the larger set? Is the sample representative of the larger set (e.g. geographic coverage)? If so, please describe how this representativeness was validated/verified. If it is not representative of the larger set, please describe why not (e.g. to cover a more diverse range of instances, because instances were withheld or unavailable).
 
-	The Company Dataset is a sample of a larger dataset. According to [Statista (2023)]([https://example.com/markdown-guide](https://www.statista.com/statistics/1260686/global-companies/)), there were 333.34 million companies in the world. This dataset contains 12 million of those companies. However, the selection criteria is unclear. 
+	The Company Dataset is a sample of a larger dataset. According to [Statista (2023)]([https://example.com/markdown-guide](https://www.statista.com/statistics/1260686/global-companies/)), there were 333.34 million companies in the world. This dataset contains 12 million of those companies. However, the selection criteria is unclear.
 
-4. **What data does each instance consist of?** "Raw" data (e.g. unprocessed text or images) or features? In either case, please provide a description.
+	The Person Dataset is also a sample of a larger dataset. 
 
-	Each instance in the Company Dataset contains attributes like name, location, parents, subsidiaries, industry, number of employees, annual revenue of a company. The attributes have different data types: arrays, strings, numbers nad enumerations. 
+7. **What data does each instance consist of?** "Raw" data (e.g. unprocessed text or images) or features? In either case, please provide a description.
 
-5. **Is there a label or target associated with each instance?** If so, please provide a description.
+	Each instance in the Company Dataset contains attributes like name, location, parents, subsidiaries, industry, number of employees, annual revenue of a company. The attributes have different data types: arrays, strings, numbers nad enumerations.
 
-	Yes. Since each document consists of company attributes and their values in the form of JSON key-value pairs, the instances are well-labelled. These are all the possible labels:
+ 	Each instance in the Person Dataset contains attributes of the person's professional profile like: name, birthdate, linkedin url.  
+
+9. **Is there a label or target associated with each instance?** If so, please provide a description.
+
+	Yes. Since each document consists of company attributes and their values in the form of JSON key-value pairs, the instances are well-labelled.
+	
+ These are all the possible labels for the Company Dataset:
 
 	affiliated_profiles  
 	all_subsidiaries  
@@ -116,53 +125,71 @@ Organization: *University of California, Berkeley*
 	type  
 	ultimate_parent   
 
-7. **Is any information missing from individual instances?** If so, please provide a description, explaining why this information is missing (e.g. because it was unavailable). This does not include intentionally removed information, but might include, e.g. redacted text.
+These are over 200 possible labels in the Person Dataset. Here are some of the top labels:  
+
+	birth_date  
+ 	education  
+  	emails  
+   	experience  
+    	full_name  
+     	gender  
+      	industry  
+       	job_company_name  
+	linkedin_url  
+ 	mobile_phone  
+  	skills  
+   	street_address   
+    	work_email
+	
+11. **Is any information missing from individual instances?** If so, please provide a description, explaining why this information is missing (e.g. because it was unavailable). This does not include intentionally removed information, but might include, e.g. redacted text.
 
 	Yes, PDL acknolwedges that there can be missing values from individual instances. This is either because the data was not available or because the value is not applicable. For example, many companies are listed in the stock market, so they will not have a value for "ticker".
 
- 	PDL also provides the exact percentage of data that is filled for a certain attribute. Location for example has a fill of 84%, meaning 84% of the companies will have a value for location. For the remaining, it does not mean the company is not located anywhere. Rather, the data was unavailable. 
+ 	PDL also provides the exact percentage of data that is filled for a certain attribute. Location for example has a fill of 84%, meaning 84% of the companies will have a value for location. For the remaining, it does not mean the company is not located anywhere. Rather, the data was unavailable.
 
-9. **Are relationships between individual instances made explicit (e.g. users' movie ratings, social network links)?** If so, please describe how these relationships are made explicit.
+ 	The attributes with the least fill values (<1%) are: all_subsidiaries, direct_subsidiaries, gics, immediate_parent, mic_exchange, ticker, ultimate_parent.  
 
-	*Your Answer Here*
-
-10. **Are there recommended data splits (e.g. training, development/validation, testing)?** If so, please provide a description of these splits, explaining the rationale behind them.
+12. **Are relationships between individual instances made explicit (e.g. users' movie ratings, social network links)?** If so, please describe how these relationships are made explicit.
 
 	*Your Answer Here*
 
-11. **Are there any errors, sources of noise, or redundancies in the dataset?** If so, please provide a description.
+13. **Are there recommended data splits (e.g. training, development/validation, testing)?** If so, please provide a description of these splits, explaining the rationale behind them.
 
 	*Your Answer Here*
 
-12. **Is the dataset self-contained, or does it link to or otherwise rely on external resources (e.g. websites, tweets, other datasets)?** If it links to or relies on external resources, a) are there guarantees that they will exist, and remain constant, over time; b) are there official archival versions of the complete dataset (i.e., including the external resources as they existed at the time the dataset was created); c) are there any restrictions (e.g. licenses, fees) associated with any of the external resources that might apply to a future user? Please provide descriptions of all external resources and any restrictions associated with them, as well as links or other access points, as appropriate.
+14. **Are there any errors, sources of noise, or redundancies in the dataset?** If so, please provide a description.
 
 	*Your Answer Here*
 
-13. **Does the dataset contain data that might be considered confidential (e.g. data that is protected by legal privilege or by doctor-patient confidentiality, data that includes the content of individuals' non-public communications)?** If so, please provide a description.
+15. **Is the dataset self-contained, or does it link to or otherwise rely on external resources (e.g. websites, tweets, other datasets)?** If it links to or relies on external resources, a) are there guarantees that they will exist, and remain constant, over time; b) are there official archival versions of the complete dataset (i.e., including the external resources as they existed at the time the dataset was created); c) are there any restrictions (e.g. licenses, fees) associated with any of the external resources that might apply to a future user? Please provide descriptions of all external resources and any restrictions associated with them, as well as links or other access points, as appropriate.
 
 	*Your Answer Here*
 
-14. **Does the dataset contain data that, if viewed directly, might be offensive, insulting, threatening, or might otherwise cause anxiety?** If so, please describe why.
+16. **Does the dataset contain data that might be considered confidential (e.g. data that is protected by legal privilege or by doctor-patient confidentiality, data that includes the content of individuals' non-public communications)?** If so, please provide a description.
 
 	*Your Answer Here*
 
-15. **Does the dataset relate to people?** If not, you may skip the remaining questions in this section.
+17. **Does the dataset contain data that, if viewed directly, might be offensive, insulting, threatening, or might otherwise cause anxiety?** If so, please describe why.
 
 	*Your Answer Here*
 
-16. **Does the dataset identify any subpopulations (e.g. by age, gender)?** If so, please describe how these subpopulations are identified and provide a description of their respective distributions within the dataset.
+18. **Does the dataset relate to people?** If not, you may skip the remaining questions in this section.
 
 	*Your Answer Here*
 
-17. **Is it possible to identify individuals (i.e., one or more natural persons), either directly or indirectly (i.e., in combination with other data) from the dataset?** If so, please describe how.
+19. **Does the dataset identify any subpopulations (e.g. by age, gender)?** If so, please describe how these subpopulations are identified and provide a description of their respective distributions within the dataset.
 
 	*Your Answer Here*
 
-18. **Does the dataset contain data that might be considered sensitive in any way (e.g. data that reveals racial or ethnic origins, sexual orientations, religious beliefs, political opinions or union memberships, or locations; financial or health data; biometric or genetic data; forms of government identification, such as social security numbers; criminal history)?** If so, please provide a description.
+20. **Is it possible to identify individuals (i.e., one or more natural persons), either directly or indirectly (i.e., in combination with other data) from the dataset?** If so, please describe how.
 
 	*Your Answer Here*
 
-19. **Any other comments?**
+21. **Does the dataset contain data that might be considered sensitive in any way (e.g. data that reveals racial or ethnic origins, sexual orientations, religious beliefs, political opinions or union memberships, or locations; financial or health data; biometric or genetic data; forms of government identification, such as social security numbers; criminal history)?** If so, please provide a description.
+
+	*Your Answer Here*
+
+22. **Any other comments?**
 
 	*Your Answer Here*
 
