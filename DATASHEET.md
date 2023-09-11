@@ -50,117 +50,119 @@ Organization: *University of California, Berkeley*
 
 	Yes. Since each document consists of company attributes and their values in the form of JSON key-value pairs, the instances are well-labelled. These are all the possible labels:
 
-	affiliated_profiles
-	all_subsidiaries
-	alternative_domains
-	alternative_names
-	average_employee_tenure
-	average_tenure_by_level
-	average_tenure_by_role
-	direct_subsidiaries
-	employee_churn_rate
-	employee_count
-	employee_count_by_country
-	employee_count_by_month
-	employee_count_by_month_by_level
-	employee_count_by_month_by_role
-	employee_growth_rate
-	facebook_url
-	founded
-	gics_sector
-	gross_additions_by_month
-	gross_departures_by_month
-	headline
-	id
-	immediate_parent
-	industry
-	inferred_revenue
-	linkedin_id
-	linkedin_url
-	location
-	location.address_line_2
-	location.continent
-	location.country
-	location.geo
-	location.locality
-	location.metro
-	location.name
-	location.postal_code
-	location.region
-	location.street_address
-	mic_exchange
-	naics
-	naics.industry_group
-	naics.naics_code
-	naics.naics_industry
-	naics.national_industry
-	naics.sector
-	naics.sub_sector
-	name
-	profiles
-	recent_exec_departures
-	recent_exec_hires
-	sic
-	sic.industry_group
-	sic.industry_sector
-	sic.major_group
-	sic.sic_code
-	size
-	summary
-	tags
-	ticker
-	top_next_employers_by_role
-	top_previous_employers_by_role
-	top_us_employee_metros
-	twitter_url
-	type
-	ultimate_parent 
+	affiliated_profiles  
+	all_subsidiaries  
+	alternative_domains  
+	alternative_names  
+	average_employee_tenure  
+	average_tenure_by_level  
+	average_tenure_by_role  
+	direct_subsidiaries  
+	employee_churn_rate  
+	employee_count  
+	employee_count_by_country  
+	employee_count_by_month  
+	employee_count_by_month_by_level  
+	employee_count_by_month_by_role  
+	employee_growth_rate  
+	facebook_url  
+	founded  
+	gics_sector  
+	gross_additions_by_month  
+	gross_departures_by_month  
+	headline  
+	id  
+	immediate_parent  
+	industry  
+	inferred_revenue  
+	linkedin_id  
+	linkedin_url  
+	location  
+	location.address_line_2  
+	location.continent  
+	location.country  
+	location.geo  
+	location.locality  
+	location.metro  
+	location.name  
+	location.postal_code  
+	location.region  
+	location.street_address  
+	mic_exchange  
+	naics  
+	naics.industry_group  
+	naics.naics_code  
+	naics.naics_industry  
+	naics.national_industry  
+	naics.sector  
+	naics.sub_sector  
+	name  
+	profiles  
+	recent_exec_departures  
+	recent_exec_hires  
+	sic  
+	sic.industry_group  
+	sic.industry_sector  
+	sic.major_group  
+	sic.sic_code  
+	size  
+	summary  
+	tags  
+	ticker  
+	top_next_employers_by_role  
+	top_previous_employers_by_role  
+	top_us_employee_metros  
+	twitter_url  
+	type  
+	ultimate_parent   
 
 7. **Is any information missing from individual instances?** If so, please provide a description, explaining why this information is missing (e.g. because it was unavailable). This does not include intentionally removed information, but might include, e.g. redacted text.
 
-	Yes. 
+	Yes, PDL acknolwedges that there can be missing values from individual instances. This is either because the data was not available or because the value is not applicable. For example, many companies are listed in the stock market, so they will not have a value for "ticker".
 
-8. **Are relationships between individual instances made explicit (e.g. users' movie ratings, social network links)?** If so, please describe how these relationships are made explicit.
+ 	PDL also provides the exact percentage of data that is filled for a certain attribute. Location for example has a fill of 84%, meaning 84% of the companies will have a value for location. For the remaining, it does not mean the company is not located anywhere. Rather, the data was unavailable. 
 
-	*Your Answer Here*
-
-9. **Are there recommended data splits (e.g. training, development/validation, testing)?** If so, please provide a description of these splits, explaining the rationale behind them.
+9. **Are relationships between individual instances made explicit (e.g. users' movie ratings, social network links)?** If so, please describe how these relationships are made explicit.
 
 	*Your Answer Here*
 
-10. **Are there any errors, sources of noise, or redundancies in the dataset?** If so, please provide a description.
+10. **Are there recommended data splits (e.g. training, development/validation, testing)?** If so, please provide a description of these splits, explaining the rationale behind them.
 
 	*Your Answer Here*
 
-11. **Is the dataset self-contained, or does it link to or otherwise rely on external resources (e.g. websites, tweets, other datasets)?** If it links to or relies on external resources, a) are there guarantees that they will exist, and remain constant, over time; b) are there official archival versions of the complete dataset (i.e., including the external resources as they existed at the time the dataset was created); c) are there any restrictions (e.g. licenses, fees) associated with any of the external resources that might apply to a future user? Please provide descriptions of all external resources and any restrictions associated with them, as well as links or other access points, as appropriate.
+11. **Are there any errors, sources of noise, or redundancies in the dataset?** If so, please provide a description.
 
 	*Your Answer Here*
 
-12. **Does the dataset contain data that might be considered confidential (e.g. data that is protected by legal privilege or by doctor-patient confidentiality, data that includes the content of individuals' non-public communications)?** If so, please provide a description.
+12. **Is the dataset self-contained, or does it link to or otherwise rely on external resources (e.g. websites, tweets, other datasets)?** If it links to or relies on external resources, a) are there guarantees that they will exist, and remain constant, over time; b) are there official archival versions of the complete dataset (i.e., including the external resources as they existed at the time the dataset was created); c) are there any restrictions (e.g. licenses, fees) associated with any of the external resources that might apply to a future user? Please provide descriptions of all external resources and any restrictions associated with them, as well as links or other access points, as appropriate.
 
 	*Your Answer Here*
 
-13. **Does the dataset contain data that, if viewed directly, might be offensive, insulting, threatening, or might otherwise cause anxiety?** If so, please describe why.
+13. **Does the dataset contain data that might be considered confidential (e.g. data that is protected by legal privilege or by doctor-patient confidentiality, data that includes the content of individuals' non-public communications)?** If so, please provide a description.
 
 	*Your Answer Here*
 
-14. **Does the dataset relate to people?** If not, you may skip the remaining questions in this section.
+14. **Does the dataset contain data that, if viewed directly, might be offensive, insulting, threatening, or might otherwise cause anxiety?** If so, please describe why.
 
 	*Your Answer Here*
 
-15. **Does the dataset identify any subpopulations (e.g. by age, gender)?** If so, please describe how these subpopulations are identified and provide a description of their respective distributions within the dataset.
+15. **Does the dataset relate to people?** If not, you may skip the remaining questions in this section.
 
 	*Your Answer Here*
 
-16. **Is it possible to identify individuals (i.e., one or more natural persons), either directly or indirectly (i.e., in combination with other data) from the dataset?** If so, please describe how.
+16. **Does the dataset identify any subpopulations (e.g. by age, gender)?** If so, please describe how these subpopulations are identified and provide a description of their respective distributions within the dataset.
 
 	*Your Answer Here*
 
-17. **Does the dataset contain data that might be considered sensitive in any way (e.g. data that reveals racial or ethnic origins, sexual orientations, religious beliefs, political opinions or union memberships, or locations; financial or health data; biometric or genetic data; forms of government identification, such as social security numbers; criminal history)?** If so, please provide a description.
+17. **Is it possible to identify individuals (i.e., one or more natural persons), either directly or indirectly (i.e., in combination with other data) from the dataset?** If so, please describe how.
 
 	*Your Answer Here*
 
-18. **Any other comments?**
+18. **Does the dataset contain data that might be considered sensitive in any way (e.g. data that reveals racial or ethnic origins, sexual orientations, religious beliefs, political opinions or union memberships, or locations; financial or health data; biometric or genetic data; forms of government identification, such as social security numbers; criminal history)?** If so, please provide a description.
+
+	*Your Answer Here*
+
+19. **Any other comments?**
 
 	*Your Answer Here*
 
