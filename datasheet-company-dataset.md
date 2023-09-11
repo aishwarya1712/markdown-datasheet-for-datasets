@@ -1,15 +1,15 @@
-# Datasheet: *Your Dataset Name Here*
+# Datasheet: *People Data Labs Company Dataset*
 
-Author: *Your Name Here*
+Author: *Aishwarya Sriram*
 
-Organization: *Your Organization Here*
+Organization: *University of California, Berkeley*
 
 
 ## Motivation
 
 *The questions in this section are primarily intended to encourage dataset creators to clearly articulate their reasons for creating the dataset and to promote transparency about funding interests.*
 
-1. **For what purpose was the dataset created?** Was there a specific task in mind? Was there a specific gap that needed to be filled? Please provide a description.
+1. **For what purpose was the Company Dataset created?** Was there a specific task in mind? Was there a specific gap that needed to be filled? Please provide a description.
 
 	*Your Answer Here*
 
