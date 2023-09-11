@@ -158,6 +158,8 @@ These are over 200 possible labels in the Person Dataset. Here are some of the t
 
 14. **Are there recommended data splits (e.g. training, development/validation, testing)?** If so, please provide a description of these splits, explaining the rationale behind them.
 
+	Yes.
+
 	There are recommended data splits, particularly in the Person Dataset, which PDL is calling "Slice" datasets.
 A slice is a subset of PDL's Person Dataset that contains every record with non-null value for a specific field. For example, the Email Slice Dataset contains every record from our Person Dataset with at least one non-null email address.
 
@@ -172,37 +174,39 @@ A slice is a subset of PDL's Person Dataset that contains every record with non-
 
 16. **Are there any errors, sources of noise, or redundancies in the dataset?** If so, please provide a description.
 
-	*Your Answer Here*
+	Yes.
+	Considering that PDL deals with very large volumes of data, they often deal with many records containing information about the same person. They refer to these as "Frankenstein profiles," where data from multiple individuals is merged into a single record, rendering it unusable and potentially causing issues with applications.
+	
 
-17. **Is the dataset self-contained, or does it link to or otherwise rely on external resources (e.g. websites, tweets, other datasets)?** If it links to or relies on external resources, a) are there guarantees that they will exist, and remain constant, over time; b) are there official archival versions of the complete dataset (i.e., including the external resources as they existed at the time the dataset was created); c) are there any restrictions (e.g. licenses, fees) associated with any of the external resources that might apply to a future user? Please provide descriptions of all external resources and any restrictions associated with them, as well as links or other access points, as appropriate.
-
-	*Your Answer Here*
-
-18. **Does the dataset contain data that might be considered confidential (e.g. data that is protected by legal privilege or by doctor-patient confidentiality, data that includes the content of individuals' non-public communications)?** If so, please provide a description.
+18. **Is the dataset self-contained, or does it link to or otherwise rely on external resources (e.g. websites, tweets, other datasets)?** If it links to or relies on external resources, a) are there guarantees that they will exist, and remain constant, over time; b) are there official archival versions of the complete dataset (i.e., including the external resources as they existed at the time the dataset was created); c) are there any restrictions (e.g. licenses, fees) associated with any of the external resources that might apply to a future user? Please provide descriptions of all external resources and any restrictions associated with them, as well as links or other access points, as appropriate.
 
 	*Your Answer Here*
 
-19. **Does the dataset contain data that, if viewed directly, might be offensive, insulting, threatening, or might otherwise cause anxiety?** If so, please describe why.
+19. **Does the dataset contain data that might be considered confidential (e.g. data that is protected by legal privilege or by doctor-patient confidentiality, data that includes the content of individuals' non-public communications)?** If so, please provide a description.
 
 	*Your Answer Here*
 
-20. **Does the dataset relate to people?** If not, you may skip the remaining questions in this section.
+20. **Does the dataset contain data that, if viewed directly, might be offensive, insulting, threatening, or might otherwise cause anxiety?** If so, please describe why.
 
 	*Your Answer Here*
 
-21. **Does the dataset identify any subpopulations (e.g. by age, gender)?** If so, please describe how these subpopulations are identified and provide a description of their respective distributions within the dataset.
+21. **Does the dataset relate to people?** If not, you may skip the remaining questions in this section.
 
 	*Your Answer Here*
 
-22. **Is it possible to identify individuals (i.e., one or more natural persons), either directly or indirectly (i.e., in combination with other data) from the dataset?** If so, please describe how.
+22. **Does the dataset identify any subpopulations (e.g. by age, gender)?** If so, please describe how these subpopulations are identified and provide a description of their respective distributions within the dataset.
 
 	*Your Answer Here*
 
-23. **Does the dataset contain data that might be considered sensitive in any way (e.g. data that reveals racial or ethnic origins, sexual orientations, religious beliefs, political opinions or union memberships, or locations; financial or health data; biometric or genetic data; forms of government identification, such as social security numbers; criminal history)?** If so, please provide a description.
+23. **Is it possible to identify individuals (i.e., one or more natural persons), either directly or indirectly (i.e., in combination with other data) from the dataset?** If so, please describe how.
 
 	*Your Answer Here*
 
-24. **Any other comments?**
+24. **Does the dataset contain data that might be considered sensitive in any way (e.g. data that reveals racial or ethnic origins, sexual orientations, religious beliefs, political opinions or union memberships, or locations; financial or health data; biometric or genetic data; forms of government identification, such as social security numbers; criminal history)?** If so, please provide a description.
+
+	*Your Answer Here*
+
+25. **Any other comments?**
 
 	*Your Answer Here*
 
