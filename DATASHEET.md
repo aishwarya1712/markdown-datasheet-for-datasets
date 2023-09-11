@@ -2,24 +2,24 @@
 
 Author: *Aishwarya Sriram*
 
-Organization: *Your Organization Here*
+Organization: *University of California, Berkeley*
 
 
 ## Motivation
 
 *The questions in this section are primarily intended to encourage dataset creators to clearly articulate their reasons for creating the dataset and to promote transparency about funding interests.*
 
-1. **For what purpose was the dataset created?** Was there a specific task in mind? Was there a specific gap that needed to be filled? Please provide a description.
+1. **For what purpose was the Company Dataset created?** Was there a specific task in mind? Was there a specific gap that needed to be filled? Please provide a description.
 
-	*Your Answer Here*
-
+	The Company Dataset was created for companies and individuals to analyze over 12 million records of company data. Though the specific usecase depends on the goals of the organization or the individual, there are a number of possible ways to use this dataset namely: sales & marketing, company prospecting, fraud prevention, identity resolution and investment research.
+.
 2. **Who created this dataset (e.g. which team, research group) and on behalf of which entity (e.g. company, institution, organization)**?
 
-	*Your Answer Here*
+	This dataset was created by "People Data Labs" (PDL), a software company based on San Francisco, California, co-founded by Sean Thorne and Henry Nevue. The documentation does not specifically mention who was involved in collecting the data.
 
 3. **What support was needed to make this dataset?** (e.g. who funded the creation of the dataset? If there is an associated grant, provide the name of the grantor and the grant name and number, or if it was supported by a company or government agency, give those details.)
 
-	*Your Answer Here*
+	The PDL website acknowledges support from three venture capital firms: Craft Ventures, 8VC and Founders Fund. 
 
 4. **Any other comments?**
 
