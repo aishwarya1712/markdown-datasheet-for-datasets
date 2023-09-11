@@ -1,6 +1,6 @@
 # Datasheet: *People Data Labs Company Dataset*
 
-Author: *Your Name Here*
+Author: *Aishwarya Sriram*
 
 Organization: *Your Organization Here*
 
