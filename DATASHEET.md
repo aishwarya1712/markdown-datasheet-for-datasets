@@ -11,7 +11,7 @@ Organization: *University of California, Berkeley*
 
 1. **For what purpose was the Company Dataset created?** Was there a specific task in mind? Was there a specific gap that needed to be filled? Please provide a description.
 
-	The Company Dataset was created for companies and individuals to analyze over 29 million records of company data. Though the specific usecase depends on the goals of the organization or the individual, there are a number of possible ways to use this dataset namely: sales & marketing, company prospecting, fraud prevention, identity resolution and investment research.
+	The Company Dataset was created for companies and individuals to analyze over 29 million records[1] of company data. Though the specific usecase depends on the goals of the organization or the individual, there are a number of possible ways to use this dataset namely: sales & marketing, company prospecting, fraud prevention, identity resolution and investment research.
 
 2. **Who created this dataset (e.g. which team, research group) and on behalf of which entity (e.g. company, institution, organization)**?
 
@@ -19,7 +19,7 @@ Organization: *University of California, Berkeley*
 
 3. **What support was needed to make this dataset?** (e.g. who funded the creation of the dataset? If there is an associated grant, provide the name of the grantor and the grant name and number, or if it was supported by a company or government agency, give those details.)
 
-	The PDL website acknowledges support from three venture capital firms: Craft Ventures, 8VC and Founders Fund.
+	The PDL website acknowledges support from three venture capital firms: Craft Ventures, 8VC and Founders Fund[2].
 
 
 ## Composition
@@ -34,26 +34,26 @@ Organization: *University of California, Berkeley*
 
 3. **How many instances are there in total (of each type, if appropriate)?**
 
-	There are 29 million unique records of companies in the Company Dataset.
-	There are 3 billion unique records of people in the Person Dataset. 
+	There are 29 million unique records of companies in the Company Dataset.[1]
+	There are 3 billion unique records of people in the Person Dataset.[3]
 
 5. **Does the dataset contain all possible instances or is it a sample (not necessarily random) of instances from a larger set?** If the dataset is a sample, then what is the larger set? Is the sample representative of the larger set (e.g. geographic coverage)? If so, please describe how this representativeness was validated/verified. If it is not representative of the larger set, please describe why not (e.g. to cover a more diverse range of instances, because instances were withheld or unavailable).
 
-	The Company Dataset is a sample of a larger dataset. According to [Statista (2023)]([https://example.com/markdown-guide](https://www.statista.com/statistics/1260686/global-companies/)), there were 333.34 million companies in the world. This dataset contains 12 million of those companies. However, the selection criteria is unclear.
+	The Company Dataset is a sample of a larger dataset. According to [Statista (2023](https://www.statista.com/statistics/1260686/global-companies/)[4], there were 333.34 million companies in the world. This dataset contains 12 million of those companies. However, the selection criteria is unclear.
 
 	The Person Dataset is also a sample of a larger dataset. 
 
 7. **What data does each instance consist of?** "Raw" data (e.g. unprocessed text or images) or features? In either case, please provide a description.
 
-	Each instance in the Company Dataset contains attributes like name, location, parents, subsidiaries, industry, number of employees, annual revenue of a company. The attributes have different data types: arrays, strings, numbers nad enumerations.
+	Each instance in the Company Dataset contains attributes like name, location, parents, subsidiaries, industry, number of employees, annual revenue of a company. The attributes have different data types: arrays, strings, numbers nad enumerations.[5]
 
- 	Each instance in the Person Dataset contains attributes of the person's professional profile like: name, birthdate, linkedin url.  
+ 	Each instance in the Person Dataset contains attributes of the person's professional profile like: name, birthdate, linkedin url.[6]  
 
 9. **Is there a label or target associated with each instance?** If so, please provide a description.
 
 	Yes. Since each document consists of company attributes and their values in the form of JSON key-value pairs, the instances are well-labelled.
 	
- These are all the possible labels for the Company Dataset:
+ These are all the possible labels[5] for the Company Dataset:
 
 	affiliated_profiles  
 	all_subsidiaries  
@@ -121,7 +121,7 @@ Organization: *University of California, Berkeley*
 	type  
 	ultimate_parent   
 
-These are over 200 possible labels in the Person Dataset. Here are some of the top labels:  
+These are over 200 possible labels[6] in the Person Dataset. Here are some of the top labels:  
 
 	birth_date  
 	education  
@@ -142,7 +142,7 @@ These are over 200 possible labels in the Person Dataset. Here are some of the t
 
 	Yes, PDL acknolwedges that there can be missing values from individual instances. This is either because the data was not available or because the value is not applicable. For example, many companies are listed in the stock market, so they will not have a value for "ticker".
 
- 	PDL also provides the exact percentage of data that is filled for a certain attribute. Location for example has a fill of 84%, meaning 84% of the companies will have a value for location. For the remaining, it does not mean the company is not located anywhere. Rather, the data was unavailable.
+ 	PDL also provides the exact percentage[7] of data that is filled for a certain attribute. Location for example has a fill of 84%, meaning 84% of the companies will have a value for location. For the remaining, it does not mean the company is not located anywhere. Rather, the data was unavailable.
 
  	The attributes with the least fill values (<1%) are: all_subsidiaries, direct_subsidiaries, gics, immediate_parent, mic_exchange, ticker, ultimate_parent.
 
@@ -156,7 +156,7 @@ These are over 200 possible labels in the Person Dataset. Here are some of the t
 
 	Yes.
 
-	There are recommended data splits, particularly in the Person Dataset, which PDL is calling "Slice" datasets.
+	There are recommended data splits, particularly in the Person Dataset, which PDL is calling "Slice" datasets.[8]
 A slice is a subset of PDL's Person Dataset that contains every record with non-null value for a specific field. For example, the Email Slice Dataset contains every record from our Person Dataset with at least one non-null email address.
 
 	1. All Dataset
@@ -172,18 +172,18 @@ A slice is a subset of PDL's Person Dataset that contains every record with non-
 
 	Yes.
 
-	Considering that PDL deals with very large volumes of data, they often deal with many records containing information about the same person. They refer to these as "Frankenstein profiles," where data from multiple individuals is merged into a single record, rendering it unusable and potentially causing issues with applications.
+	Considering that PDL deals with very large volumes of data, they often deal with many records containing information about the same person. They refer to these as "Frankenstein profiles,"[9] where data from multiple individuals is merged into a single record, rendering it unusable and potentially causing issues with applications.
 
 	Furthermore, for companies in the Company Dataset, there are overlaps among several attributes. For example: the affiliated_profiles attribute contains a list of company IDs that the current company is related to, either parent or subsidiaries. However, parent & subsidiary company IDs are also stored in separate attributes, leading to redundancy.
 	
 
 18. **Is the dataset self-contained, or does it link to or otherwise rely on external resources (e.g. websites, tweets, other datasets)?** If it links to or relies on external resources, a) are there guarantees that they will exist, and remain constant, over time; b) are there official archival versions of the complete dataset (i.e., including the external resources as they existed at the time the dataset was created); c) are there any restrictions (e.g. licenses, fees) associated with any of the external resources that might apply to a future user? Please provide descriptions of all external resources and any restrictions associated with them, as well as links or other access points, as appropriate.
 
-	Yes. The dataset relies on external sources, namely Data Union and the information available on the internet. 
+	Yes. The dataset relies on external sources, namely the Data Union and the information available on the internet.[10] 
 
 19. **Does the dataset contain data that might be considered confidential (e.g. data that is protected by legal privilege or by doctor-patient confidentiality, data that includes the content of individuals' non-public communications)?** If so, please provide a description.
 
-	While the Company Dataset likely does not contain confidential information, the Person Dataset might. The Person Dataset contains a contact's all possible email addresses and phone numbers, which are sensitive in nature. PDL claims to have procured the data from publicly available sources, including the public internet and social media, Data Union  and third parties who license, sell, or otherwise provide data they have collected. They claim to not collect data from private sites.
+	While the Company Dataset likely does not contain confidential information, the Person Dataset might. The Person Dataset contains a contact's all possible email addresses and phone numbers, which are sensitive in nature. PDL claims to have procured the data from publicly available sources, including the public internet and social media, Data Union  and third parties who license, sell, or otherwise provide data they have collected. They claim to not collect data from private sites.[10]
 
 21. **Does the dataset contain data that, if viewed directly, might be offensive, insulting, threatening, or might otherwise cause anxiety?** If so, please describe why.
 
@@ -195,11 +195,11 @@ A slice is a subset of PDL's Person Dataset that contains every record with non-
 
 23. **Does the dataset identify any subpopulations (e.g. by age, gender)?** If so, please describe how these subpopulations are identified and provide a description of their respective distributions within the dataset.
 
-	Yes. Both the Company and Person datasets aggregates all companies and people by their HQ country. 
+	Yes. Both the Company and Person datasets aggregates all companies and people by their HQ country.
 
 24. **Is it possible to identify individuals (i.e., one or more natural persons), either directly or indirectly (i.e., in combination with other data) from the dataset?** If so, please describe how.
 
-	Yes. It is possible to identify individuals from both the Company and the Person Dataset, and also obtain their personal information such as name, birthdate, phone number, location, email address and social media identifiers. 
+	Yes. It is possible to identify individuals from both the Company and the Person Dataset, and also obtain their personal information such as name, birthdate, phone number, location, email address and social media identifiers.[6]
 
 25. **Does the dataset contain data that might be considered sensitive in any way (e.g. data that reveals racial or ethnic origins, sexual orientations, religious beliefs, political opinions or union memberships, or locations; financial or health data; biometric or genetic data; forms of government identification, such as social security numbers; criminal history)?** If so, please provide a description.
 
@@ -212,14 +212,14 @@ A slice is a subset of PDL's Person Dataset that contains every record with non-
 
 1. **How was the data associated with each instance acquired?** Was the data directly observable (e.g. raw text, movie ratings), reported by subjects (e.g. survey responses), or indirectly inferred/derived from other data (e.g. part-of-speech tags, model-based guesses for age or language)? If data was reported by subjects or indirectly inferred/derived from other data, was the data validated/verified? If so, please describe how.
 
-	In a nutshell, this is how PDL acquires its data: 
+	In a nutshell, this is how PDL acquires its data[11]: 
 	1. Raw data is obtained from a variety of sources (Data Union and other public sources)
 	2. This data is then cleaned by standardization and deduplication techniques to get it ready index into the dataset
 	3. At each step, quality assurance checks are performed to ensure quality and compliance
 
 2. **What mechanisms or procedures were used to collect the data (e.g. hardware apparatus or sensor, manual human curation, software program, software API)?** How were these mechanisms or procedures validated?
 
-	Data for Company and Person Dataset is collected in two ways:
+	Data for Company and Person Dataset is collected in two ways[11]:
 
 	The majority of individual-specific data in their dataset is supplied through sources connected to "Data Union", a data sharing community with thousands of contributors. Data Union plays a vital role in ensuring compliance with global regulations.
 
@@ -232,7 +232,7 @@ A slice is a subset of PDL's Person Dataset that contains every record with non-
 5. **Who was involved in the data collection process (e.g. students, crowdworkers, contractors) and how were they compensated (e.g. how much were crowdworkers paid)?**
 
 	Employees of PDL were involved in data collection, as well as contributors to the Data Union.
-Though official numbers have not been published, according to Glassdoor, PDL data and software engineers are paid between $95K-$175K anually.
+Though official numbers have not been published, according to Glassdoor, PDL data and software engineers are paid between $95K-$175K anually[12].
 
 7. **Over what timeframe was the data collected?** Does this timeframe match the creation timeframe of the data associated with the instances (e.g. recent crawl of old news articles)? If not, please describe the timeframe in which the data associated with the instances was created. Finally, list when the dataset was first published.
 
@@ -247,15 +247,15 @@ Though official numbers have not been published, according to Glassdoor, PDL dat
 	Yes. The Person Dataset is entirely about people (contacts) belonging to various companies.
 
 11. **Did you collect the data from the individuals in question directly, or obtain it via third parties or other sources (e.g. websites)?**
-    	No. The data was not collected directly from the individuals, rather it was collected from Data Union as well as third party and public sources by scraping the web. 
+    	No. The data was not collected directly from the individuals, rather it was collected from Data Union as well as third party and public sources by scraping the web.[11]
 
 13. **Were the individuals in question notified about the data collection?** If so, please describe (or show with screenshots or other information) how notice was provided, and provide a link or other access point to, or otherwise reproduce, the exact language of the notification itself.
 
-	Yes. Data Union has a signed a services subscription agreement with PDL. One of the terms and conditions of this agreement states that Data Union will provide necessary notices to any individual who's data is being collected and shared with PDL. 
+	Yes. Data Union has a signed a [services subscription agreement](https://privacy.peopledatalabs.com/policies?name=privacy-center) with PDL. One of the terms and conditions of this agreement states that Data Union will provide necessary notices to any individual who's data is being collected and shared with PDL. 
 
 14. **Did the individuals in question consent to the collection and use of their data?** If so, please describe (or show with screenshots or other information) how consent was requested and provided, and provide a link or other access point to, or otherwise reproduce, the exact language to which the individuals consented.
 
-	Yes. Data Union has a signed a services subscription agreement with PDL. Following are the relevant terms and conditions of the agreement: 
+	Yes. Data Union has a signed a [services subscription agreement](https://privacy.peopledatalabs.com/policies?name=privacy-center) with PDL. Following are the relevant terms and conditions of the agreement: 
 	1. The data they're sharing with PDL has been collected, processed, and provided to us in accordance with all applicable U.S. and international laws, including any applicable data protection legislation, and the customer's privacy policy
 
 	2. They've obtained any required consents concerning the collection, use, processing, transfer, and disclosure from the individuals whose data they're sharing with PDL.
@@ -270,7 +270,6 @@ Though official numbers have not been published, according to Glassdoor, PDL dat
 17. **Has an analysis of the potential impact of the dataset and its use on data subjects (e.g. a data protection impact analysis) been conducted?** If so, please provide a description of this analysis, including the outcomes, as well as a link or other access point to any supporting documentation.
 
 	This is unknown. My take is that such an analysis has probably not been performed. 
-
 
 ## Preprocessing / Cleaning / Labeling
 
@@ -458,3 +457,18 @@ However, in case of backwards-incompatible changes, PDL will create a new versio
 
 	No. PDL is a private software company. Moreover, it is not open-source and does not allow for others to contribute to the dataset. 
 
+---
+## References 
+[1] https://www.peopledatalabs.com/company-data
+[2] https://www.peopledatalabs.com/about
+[3] https://www.peopledatalabs.com/person-data
+[4] Statista Research Department. Jun 7, 2023. Estimated number of companies worldwide from 2000 to 2021. https://www.statista.com/statistics/1260686/global-companies/ 
+[5] https://docs.peopledatalabs.com/docs/company-data-overview
+[6] https://docs.peopledatalabs.com/docs/person-data-overview
+[7] https://docs.peopledatalabs.com/docs/company-stats
+[8] https://docs.peopledatalabs.com/docs/datasets
+[9] https://docs.peopledatalabs.com/docs/data-accuracy
+[10] https://www.peopledatalabs.com/pdf/privacy-security-overview.pdf
+[11] https://pages.peopledatalabs.com/rs/079-FMM-907/images/Our%20Data%20Build%20Process.pdf
+[12] https://www.glassdoor.com/Salary/People-Data-Labs-Engineering-Salaries-EI_IE2312757.0,16_DEPT1007.htm
+[13] 
