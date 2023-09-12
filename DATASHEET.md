@@ -175,7 +175,10 @@ A slice is a subset of PDL's Person Dataset that contains every record with non-
 16. **Are there any errors, sources of noise, or redundancies in the dataset?** If so, please provide a description.
 
 	Yes.
+
 	Considering that PDL deals with very large volumes of data, they often deal with many records containing information about the same person. They refer to these as "Frankenstein profiles," where data from multiple individuals is merged into a single record, rendering it unusable and potentially causing issues with applications.
+
+	Furthermore, for companies in the Company Dataset, there are overlaps among several attributes. For example: the affiliated_profiles attribute contains a list of company IDs that the current company is related to, either parent or subsidiaries. However, parent & subsidiary company IDs are also stored in separate attributes, leading to redundancy.
 	
 
 18. **Is the dataset self-contained, or does it link to or otherwise rely on external resources (e.g. websites, tweets, other datasets)?** If it links to or relies on external resources, a) are there guarantees that they will exist, and remain constant, over time; b) are there official archival versions of the complete dataset (i.e., including the external resources as they existed at the time the dataset was created); c) are there any restrictions (e.g. licenses, fees) associated with any of the external resources that might apply to a future user? Please provide descriptions of all external resources and any restrictions associated with them, as well as links or other access points, as appropriate.
@@ -184,27 +187,27 @@ A slice is a subset of PDL's Person Dataset that contains every record with non-
 
 19. **Does the dataset contain data that might be considered confidential (e.g. data that is protected by legal privilege or by doctor-patient confidentiality, data that includes the content of individuals' non-public communications)?** If so, please provide a description.
 
-	*Your Answer Here*
+	While the Company Dataset likely does not contain confidential information, the Person Dataset might. The Person Dataset contains a contact's all possible email addresses and phone numbers, which are sensitive in nature.
 
 20. **Does the dataset contain data that, if viewed directly, might be offensive, insulting, threatening, or might otherwise cause anxiety?** If so, please describe why.
 
-	*Your Answer Here*
+	Likely no since both the datasets contain factual information about a company or a person.  
 
 21. **Does the dataset relate to people?** If not, you may skip the remaining questions in this section.
 
-	*Your Answer Here*
+	Yes. Each company in the Company Dataset is attributed to founders and executives. The Person Dataset is entirely about people.
 
 22. **Does the dataset identify any subpopulations (e.g. by age, gender)?** If so, please describe how these subpopulations are identified and provide a description of their respective distributions within the dataset.
 
-	*Your Answer Here*
+	Yes. Both the Company and Person datasets aggregates all companies and people by their HQ country. 
 
 23. **Is it possible to identify individuals (i.e., one or more natural persons), either directly or indirectly (i.e., in combination with other data) from the dataset?** If so, please describe how.
 
-	*Your Answer Here*
+	Yes. It is possible to identify individuals from both the Company and the Person Dataset, and also obtain their personal information such as name, birthdate, phone number, location, email address and social media identifiers. 
 
 24. **Does the dataset contain data that might be considered sensitive in any way (e.g. data that reveals racial or ethnic origins, sexual orientations, religious beliefs, political opinions or union memberships, or locations; financial or health data; biometric or genetic data; forms of government identification, such as social security numbers; criminal history)?** If so, please provide a description.
 
-	*Your Answer Here*
+	Likely yes. Though these datasets do not disclose the exact address, it does contain the location that the person/contact is headquartered in.
 
 25. **Any other comments?**
 
@@ -217,21 +220,28 @@ A slice is a subset of PDL's Person Dataset that contains every record with non-
 
 1. **How was the data associated with each instance acquired?** Was the data directly observable (e.g. raw text, movie ratings), reported by subjects (e.g. survey responses), or indirectly inferred/derived from other data (e.g. part-of-speech tags, model-based guesses for age or language)? If data was reported by subjects or indirectly inferred/derived from other data, was the data validated/verified? If so, please describe how.
 
-	*Your Answer Here*
+	In a nutshell, this is how PDL acquires its data: 
+	1. Raw data is obtained from a variety of sources (Data Union and other public sources)
+	2. This data is then cleaned by standardization and deduplication techniques to get it ready index into the dataset
+	3. At each step, quality assurance checks are performed to ensure quality and compliance
 
 2. **What mechanisms or procedures were used to collect the data (e.g. hardware apparatus or sensor, manual human curation, software program, software API)?** How were these mechanisms or procedures validated?
 
+	Data for Company and Person Dataset is collected in two ways:
+
+	The majority of individual-specific data in their dataset is supplied through sources connected to "Data Union", a data sharing community with thousands of contributors. Data Union plays a vital role in ensuring compliance with global regulations.
+
+	Similar to search engines like Google and Bing, PDL utilizes web scraping techniques to extract data from public sources. These sources primarily yield information about companies, educational institutions, geographic locations, as well as an individual's employment history, educational background, and more.
+
+4. **If the dataset is a sample from a larger set, what was the sampling strategy (e.g. deterministic, probabilistic with specific sampling probabilities)?**
+
 	*Your Answer Here*
 
-3. **If the dataset is a sample from a larger set, what was the sampling strategy (e.g. deterministic, probabilistic with specific sampling probabilities)?**
+5. **Who was involved in the data collection process (e.g. students, crowdworkers, contractors) and how were they compensated (e.g. how much were crowdworkers paid)?**
 
 	*Your Answer Here*
 
-4. **Who was involved in the data collection process (e.g. students, crowdworkers, contractors) and how were they compensated (e.g. how much were crowdworkers paid)?**
-
-	*Your Answer Here*
-
-5. **Over what timeframe was the data collected?** Does this timeframe match the creation timeframe of the data associated with the instances (e.g. recent crawl of old news articles)? If not, please describe the timeframe in which the data associated with the instances was created. Finally, list when the dataset was first published.
+6. **Over what timeframe was the data collected?** Does this timeframe match the creation timeframe of the data associated with the instances (e.g. recent crawl of old news articles)? If not, please describe the timeframe in which the data associated with the instances was created. Finally, list when the dataset was first published.
 
 	*Your Answer Here*
 
