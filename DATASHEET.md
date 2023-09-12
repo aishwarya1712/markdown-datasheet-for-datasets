@@ -255,14 +255,13 @@ Though official numbers have not been published, according to Glassdoor, PDL dat
 	Yes. The Person Dataset is entirely about people (contacts) belonging to various companies.
 
 11. **Did you collect the data from the individuals in question directly, or obtain it via third parties or other sources (e.g. websites)?**
-
     	No. The data was not collected directly from the individuals, rather it was collected from Data Union as well as third party and public sources by scraping the web. 
 
-12. **Were the individuals in question notified about the data collection?** If so, please describe (or show with screenshots or other information) how notice was provided, and provide a link or other access point to, or otherwise reproduce, the exact language of the notification itself.
+13. **Were the individuals in question notified about the data collection?** If so, please describe (or show with screenshots or other information) how notice was provided, and provide a link or other access point to, or otherwise reproduce, the exact language of the notification itself.
 
 	Yes. Data Union has a signed a services subscription agreement with PDL. One of the terms and conditions of this agreement states that Data Union will provide necessary notices to any individual who's data is being collected and shared with PDL. 
 
-13. **Did the individuals in question consent to the collection and use of their data?** If so, please describe (or show with screenshots or other information) how consent was requested and provided, and provide a link or other access point to, or otherwise reproduce, the exact language to which the individuals consented.
+14. **Did the individuals in question consent to the collection and use of their data?** If so, please describe (or show with screenshots or other information) how consent was requested and provided, and provide a link or other access point to, or otherwise reproduce, the exact language to which the individuals consented.
 
 	Yes. Data Union has a signed a services subscription agreement with PDL. Following are the relevant terms and conditions of the agreement: 
 	1. The data they're sharing with PDL has been collected, processed, and provided to us in accordance with all applicable U.S. and international laws, including any applicable data protection legislation, and the customer's privacy policy
@@ -272,7 +271,7 @@ Though official numbers have not been published, according to Glassdoor, PDL dat
 15. **If consent was obtained, were the consenting individuals provided with a mechanism to revoke their consent in the future or for certain uses?** If so, please provide a description, as well as a link or other access point to the mechanism (if appropriate).
 
 	Yes, PDL honours opt-outs, i.e it allows for individuals to revoke their consent in the future. They claim that these requests are built into our engineering workflows.
-	This is the [https://blog.peopledatalabs.com/post/how-people-data-labs-sources-data](link).
+	This is the [link](https://blog.peopledatalabs.com/post/how-people-data-labs-sources-data).
 
 17. **Has an analysis of the potential impact of the dataset and its use on data subjects (e.g. a data protection impact analysis) been conducted?** If so, please provide a description of this analysis, including the outcomes, as well as a link or other access point to any supporting documentation.
 
@@ -289,17 +288,24 @@ Though official numbers have not been published, according to Glassdoor, PDL dat
 
 1. **Was any preprocessing/cleaning/labeling of the data done (e.g. discretization or bucketing, tokenization, part-of-speech tagging, SIFT feature extraction, removal of instances, processing of missing values)?** If so, please provide a description. If not, you may skip the remainder of the questions in this section.
 
-	*Your Answer Here*
+	Yes.
 
-2. **Was the "raw" data saved in addition to the preprocessed/cleaned/labeled data (e.g. to support unanticipated future uses)?** If so, please provide a link or other access point to the "raw" data.
+Every attribute in their dataset undergoes a baseline cleaning step. This could either be in the form of converting all values to lowercase and removing extra whitespaces, or validating that the data follows a specific format such as email addresses.
 
-	*Your Answer Here*
+After sourcing raw data from various different sources, PDL standardizes the data format and merges duplicate records together.
+Standardizing of data is done so as to seamlessly integrate new sources of data and provides customers an easy way to understand and consume the dataset. 
 
-3. **Is the software used to preprocess/clean/label the instances available?** If so, please provide a link or other access point.
+After standardizing the dataset, PDL performs de-duplication or entity resolution to check whether to create a new record or merge to an existing record when a new chunk of data is ingested. This is done by creating blocks of data sharing a common key and sorting on it. Each new record is compared against this block. Finally, two techniques are employed to determine whether or not a merge is required: deterministic and probabilistic methods.
 
-	*Your Answer Here*
+3. **Was the "raw" data saved in addition to the preprocessed/cleaned/labeled data (e.g. to support unanticipated future uses)?** If so, please provide a link or other access point to the "raw" data.
 
-4. **Any other comments?**
+	Likely no. 
+
+4. **Is the software used to preprocess/clean/label the instances available?** If so, please provide a link or other access point.
+
+	No, this software is not open source. 
+
+5. **Any other comments?**
 
 	*Your Answer Here*
 
@@ -310,25 +316,32 @@ Though official numbers have not been published, according to Glassdoor, PDL dat
 
 1. **Has the dataset been used for any tasks already?** If so, please provide a description.
 
+	The Company Dataset has primarily been used in B2B contexts. Companies such as Madison Logic, Cisco, Qualcomm, Signal Fire, Kleiner Perkins, General Catalyst have used their Company as well as Person datasets.
+
+	Madison Logic has leveraged this dataset as a means to facilitate their clients' engagement with a broader range of individuals and businesses actively seeking their services. To achieve this goal, they required access to data that not only expanded their overall profile database but also enabled their clients to gain a comprehensive insight into the attributes of the individuals they sought to connect with, as well as the organizations they were affiliated with. The PDL datasets powered this solution, providing faster throughputs and enriching the information they already had with up-to-date data.  
+
+3. **Is there a repository that links to any or all papers or systems that use the dataset?** If so, please provide a link or other access point.
+
+	Though I have not found any papers, [this](https://pages.peopledatalabs.com/rs/079-FMM-907/images/Accelerating%20Demand%20Generation%20Services%20with%20Data%20Enrichment.pdf) is a case study of the Madison Logic usecase. 
+
+4. **What (other) tasks could the dataset be used for?**
+
+	PDL is built on Elasticsearch. They have created APIs on top of this dataset for consumers to able to access it programatically. PDL datasets are also integrated into AWS, Snowflake, Databricks, Salesforce and several other platforms.
+
+ 	Some of the ways that Company data can and have been used are:  
+	1. *Fraud Detection*: People Data Labs collaborated with an enterprise vendor, enhancing their verification and fraud detection capabilities. They used PDL data via their APIs to connect credit applicants' personal information with their professional background, simplifying the verification process.
+ 	2. *Investment Intelligence*: PDL data can help manage investment portfolios, assess changes in company headcounts, and enhance your comprehension of the org chart of a particular organization. It can also help make informed investment decisions by analyzing the financial performance, revenue, and profitability of publicly traded companies with a ticker symbol.  
+	3. *Lead Generation and Company Prospecting*: The Company Dataset can be used to generate leads for sales and marketing campaigns by targeting companies that match specific criteria, such as industry, location, or size. Segment potential customers based on company attributes.
+
+6. **Is there anything about the composition of the dataset or the way it was collected and preprocessed/cleaned/labeled that might impact future uses?** For example, is there anything that a future user might need to know to avoid uses that could result in unfair treatment of individuals or groups (e.g. stereotyping, quality of service issues) or other undesirable harms (e.g. financial harms, legal risks) If so, please provide a description. Is there anything a future user could do to mitigate these undesirable harms?
+
 	*Your Answer Here*
 
-2. **Is there a repository that links to any or all papers or systems that use the dataset?** If so, please provide a link or other access point.
+7. **Are there tasks for which the dataset should not be used?** If so, please provide a description.
 
 	*Your Answer Here*
 
-3. **What (other) tasks could the dataset be used for?**
-
-	*Your Answer Here*
-
-4. **Is there anything about the composition of the dataset or the way it was collected and preprocessed/cleaned/labeled that might impact future uses?** For example, is there anything that a future user might need to know to avoid uses that could result in unfair treatment of individuals or groups (e.g. stereotyping, quality of service issues) or other undesirable harms (e.g. financial harms, legal risks) If so, please provide a description. Is there anything a future user could do to mitigate these undesirable harms?
-
-	*Your Answer Here*
-
-5. **Are there tasks for which the dataset should not be used?** If so, please provide a description.
-
-	*Your Answer Here*
-
-6. **Any other comments?**
+8. **Any other comments?**
 
 	*Your Answer Here*
 
