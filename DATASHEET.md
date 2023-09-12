@@ -38,8 +38,8 @@ Organization: *University of California, Berkeley*
 
 3. **How many instances are there in total (of each type, if appropriate)?**
 
-	There are 12 million unique records of companies in the Company Dataset.
-	There are 3,199,277,517 unique records of people in the Person Dataset. 
+	There are 29 million unique records of companies in the Company Dataset.
+	There are 3 billion unique records of people in the Person Dataset. 
 
 5. **Does the dataset contain all possible instances or is it a sample (not necessarily random) of instances from a larger set?** If the dataset is a sample, then what is the larger set? Is the sample representative of the larger set (e.g. geographic coverage)? If so, please describe how this representativeness was validated/verified. If it is not representative of the larger set, please describe why not (e.g. to cover a more diverse range of instances, because instances were withheld or unavailable).
 
@@ -183,33 +183,33 @@ A slice is a subset of PDL's Person Dataset that contains every record with non-
 
 18. **Is the dataset self-contained, or does it link to or otherwise rely on external resources (e.g. websites, tweets, other datasets)?** If it links to or relies on external resources, a) are there guarantees that they will exist, and remain constant, over time; b) are there official archival versions of the complete dataset (i.e., including the external resources as they existed at the time the dataset was created); c) are there any restrictions (e.g. licenses, fees) associated with any of the external resources that might apply to a future user? Please provide descriptions of all external resources and any restrictions associated with them, as well as links or other access points, as appropriate.
 
-	*Your Answer Here*
+	Yes. The dataset relies on external sources, namely Data Union and the information available on the internet. 
 
 19. **Does the dataset contain data that might be considered confidential (e.g. data that is protected by legal privilege or by doctor-patient confidentiality, data that includes the content of individuals' non-public communications)?** If so, please provide a description.
 
-	While the Company Dataset likely does not contain confidential information, the Person Dataset might. The Person Dataset contains a contact's all possible email addresses and phone numbers, which are sensitive in nature.
+	While the Company Dataset likely does not contain confidential information, the Person Dataset might. The Person Dataset contains a contact's all possible email addresses and phone numbers, which are sensitive in nature. PDL claims to have procured the data from publicly available sources, including the public internet and social media, Data Union  and third parties who license, sell, or otherwise provide data they have collected. They claim to not collect data from private sites.
 
-20. **Does the dataset contain data that, if viewed directly, might be offensive, insulting, threatening, or might otherwise cause anxiety?** If so, please describe why.
+21. **Does the dataset contain data that, if viewed directly, might be offensive, insulting, threatening, or might otherwise cause anxiety?** If so, please describe why.
 
 	Likely no since both the datasets contain factual information about a company or a person.  
 
-21. **Does the dataset relate to people?** If not, you may skip the remaining questions in this section.
+22. **Does the dataset relate to people?** If not, you may skip the remaining questions in this section.
 
 	Yes. Each company in the Company Dataset is attributed to founders and executives. The Person Dataset is entirely about people.
 
-22. **Does the dataset identify any subpopulations (e.g. by age, gender)?** If so, please describe how these subpopulations are identified and provide a description of their respective distributions within the dataset.
+23. **Does the dataset identify any subpopulations (e.g. by age, gender)?** If so, please describe how these subpopulations are identified and provide a description of their respective distributions within the dataset.
 
 	Yes. Both the Company and Person datasets aggregates all companies and people by their HQ country. 
 
-23. **Is it possible to identify individuals (i.e., one or more natural persons), either directly or indirectly (i.e., in combination with other data) from the dataset?** If so, please describe how.
+24. **Is it possible to identify individuals (i.e., one or more natural persons), either directly or indirectly (i.e., in combination with other data) from the dataset?** If so, please describe how.
 
 	Yes. It is possible to identify individuals from both the Company and the Person Dataset, and also obtain their personal information such as name, birthdate, phone number, location, email address and social media identifiers. 
 
-24. **Does the dataset contain data that might be considered sensitive in any way (e.g. data that reveals racial or ethnic origins, sexual orientations, religious beliefs, political opinions or union memberships, or locations; financial or health data; biometric or genetic data; forms of government identification, such as social security numbers; criminal history)?** If so, please provide a description.
+25. **Does the dataset contain data that might be considered sensitive in any way (e.g. data that reveals racial or ethnic origins, sexual orientations, religious beliefs, political opinions or union memberships, or locations; financial or health data; biometric or genetic data; forms of government identification, such as social security numbers; criminal history)?** If so, please provide a description.
 
 	Likely yes. Though these datasets do not disclose the exact address, it does contain the location that the person/contact is headquartered in.
 
-25. **Any other comments?**
+26. **Any other comments?**
 
 	*Your Answer Here*
 
@@ -235,45 +235,50 @@ A slice is a subset of PDL's Person Dataset that contains every record with non-
 
 4. **If the dataset is a sample from a larger set, what was the sampling strategy (e.g. deterministic, probabilistic with specific sampling probabilities)?**
 
-	*Your Answer Here*
+	It appears that there is no specific sampling strategy employed by PDL.
 
 5. **Who was involved in the data collection process (e.g. students, crowdworkers, contractors) and how were they compensated (e.g. how much were crowdworkers paid)?**
 
-	*Your Answer Here*
+	Employees of PDL were involved in data collection, as well as contributors to the Data Union.
+Though official numbers have not been published, according to Glassdoor, PDL data and software engineers are paid between $95K-$175K anually.
 
-6. **Over what timeframe was the data collected?** Does this timeframe match the creation timeframe of the data associated with the instances (e.g. recent crawl of old news articles)? If not, please describe the timeframe in which the data associated with the instances was created. Finally, list when the dataset was first published.
+7. **Over what timeframe was the data collected?** Does this timeframe match the creation timeframe of the data associated with the instances (e.g. recent crawl of old news articles)? If not, please describe the timeframe in which the data associated with the instances was created. Finally, list when the dataset was first published.
 
-	*Your Answer Here*
+	The first PDL dataset was  published in October 2019 (4 years ago). Since then, PDL has been updating their datasets once a month with new data coming from Data Union. They also have major releases every two months. The last release was in July 2023.
 
-7. **Were any ethical review processes conducted (e.g. by an institutional review board)?** If so, please provide a description of these review processes, including the outcomes, as well as a link or other access point to any supporting documentation.
-
-	*Your Answer Here*
-
-8. **Does the dataset relate to people?** If not, you may skip the remainder of the questions in this section.
+9. **Were any ethical review processes conducted (e.g. by an institutional review board)?** If so, please provide a description of these review processes, including the outcomes, as well as a link or other access point to any supporting documentation.
 
 	*Your Answer Here*
 
-9. **Did you collect the data from the individuals in question directly, or obtain it via third parties or other sources (e.g. websites)?**
+10. **Does the dataset relate to people?** If not, you may skip the remainder of the questions in this section.
 
-	*Your Answer Here*
+	Yes. The Person Dataset is entirely about people (contacts) belonging to various companies.
 
-10. **Were the individuals in question notified about the data collection?** If so, please describe (or show with screenshots or other information) how notice was provided, and provide a link or other access point to, or otherwise reproduce, the exact language of the notification itself.
+11. **Did you collect the data from the individuals in question directly, or obtain it via third parties or other sources (e.g. websites)?**
 
-	*Your Answer Here*
+    	No. The data was not collected directly from the individuals, rather it was collected from Data Union as well as third party and public sources by scraping the web. 
 
-11. **Did the individuals in question consent to the collection and use of their data?** If so, please describe (or show with screenshots or other information) how consent was requested and provided, and provide a link or other access point to, or otherwise reproduce, the exact language to which the individuals consented.
+12. **Were the individuals in question notified about the data collection?** If so, please describe (or show with screenshots or other information) how notice was provided, and provide a link or other access point to, or otherwise reproduce, the exact language of the notification itself.
 
-	*Your Answer Here*
+	Yes. Data Union has a signed a services subscription agreement with PDL. One of the terms and conditions of this agreement states that Data Union will provide necessary notices to any individual who's data is being collected and shared with PDL. 
 
-12. **If consent was obtained, were the consenting individuals provided with a mechanism to revoke their consent in the future or for certain uses?** If so, please provide a description, as well as a link or other access point to the mechanism (if appropriate).
+13. **Did the individuals in question consent to the collection and use of their data?** If so, please describe (or show with screenshots or other information) how consent was requested and provided, and provide a link or other access point to, or otherwise reproduce, the exact language to which the individuals consented.
 
-	*Your Answer Here*
+	Yes. Data Union has a signed a services subscription agreement with PDL. Following are the relevant terms and conditions of the agreement: 
+	1. The data they're sharing with PDL has been collected, processed, and provided to us in accordance with all applicable U.S. and international laws, including any applicable data protection legislation, and the customer's privacy policy
 
-13. **Has an analysis of the potential impact of the dataset and its use on data subjects (e.g. a data protection impact analysis) been conducted?** If so, please provide a description of this analysis, including the outcomes, as well as a link or other access point to any supporting documentation.
+	2. They've obtained any required consents concerning the collection, use, processing, transfer, and disclosure from the individuals whose data they're sharing with PDL.
 
-	*Your Answer Here*
+15. **If consent was obtained, were the consenting individuals provided with a mechanism to revoke their consent in the future or for certain uses?** If so, please provide a description, as well as a link or other access point to the mechanism (if appropriate).
 
-14. **Any other comments?**
+	Yes, PDL honours opt-outs, i.e it allows for individuals to revoke their consent in the future. They claim that these requests are built into our engineering workflows.
+	This is the [https://blog.peopledatalabs.com/post/how-people-data-labs-sources-data](link).
+
+17. **Has an analysis of the potential impact of the dataset and its use on data subjects (e.g. a data protection impact analysis) been conducted?** If so, please provide a description of this analysis, including the outcomes, as well as a link or other access point to any supporting documentation.
+
+	This is unknown. My take is that such an analysis has probably not been performed. 
+
+18. **Any other comments?**
 
 	*Your Answer Here*
 
