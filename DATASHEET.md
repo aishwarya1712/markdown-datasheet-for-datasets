@@ -1,4 +1,4 @@
-# Datasheet: *People Data Labs Company Dataset*
+# Datasheet: *Company Dataset*
 
 Author: *Aishwarya Sriram*
 
@@ -19,11 +19,7 @@ Organization: *University of California, Berkeley*
 
 3. **What support was needed to make this dataset?** (e.g. who funded the creation of the dataset? If there is an associated grant, provide the name of the grantor and the grant name and number, or if it was supported by a company or government agency, give those details.)
 
-	The PDL website acknowledges support from three venture capital firms: Craft Ventures, 8VC and Founders Fund. 
-
-4. **Any other comments?**
-
-	*Your Answer Here*
+	The PDL website acknowledges support from three venture capital firms: Craft Ventures, 8VC and Founders Fund.
 
 
 ## Composition
@@ -338,11 +334,11 @@ Finally,  PDL generates aggregations and derived data fields to establish trends
 
 1. **Will the dataset be distributed to third parties outside of the entity (e.g. company, institution, organization) on behalf of which the dataset was created?** If so, please provide a description.
 
-	Yes. PDL is a B2B company. The Company and Person datasets are made available through Free, Pro and Enterprise plans. The Free plan provides customers with about 100 records per month. The Pro plans start at $100 and provide users with 350 records. The Enterprise plan has custom pricing and provides users unrestricted access to all fields with unlimited record access. 
+	Yes. PDL is a B2B company data provider. The Company and Person datasets are made available through Free, Pro and Enterprise plans. The Free plan provides customers with about 100 records per month. The Pro plans start at $100 and provide users with 350 records. The Enterprise plan has custom pricing and provides users unrestricted access to all fields with unlimited record access. 
 
 2. **How will the dataset will be distributed (e.g. tarball on website, API, GitHub)?** Does the dataset have a digital object identifier (DOI)?
 
-	The datasets is distributed through APIs.
+	The datasets is distributed through APIs or through a license.
 
 * Company Dataset *
 Endpoint: POST https://api.peopledatalabs.com/v5/company/search  
@@ -366,6 +362,7 @@ Other than the required inputs, the API takes optional parameters such as:
   	api_key: the secret API key  
    	dataset: comma-separated fields to be returned by the API
 
+ As for licensing, PDL customers obtain datasets in the form of an annual license. Some customers license our entire dataset while others license custom subsets of the data.
  
 4. **When will the dataset be distributed?**
 
@@ -406,29 +403,35 @@ Other than the required inputs, the API takes optional parameters such as:
 
 1. **Who is supporting/hosting/maintaining the dataset?**
 
-	*Your Answer Here*
+	The PDL Company Dataset is maintained by employees at People Data Labs.
+This data is  
 
-2. **How can the owner/curator/manager of the dataset be contacted (e.g. email address)?**
+3. **How can the owner/curator/manager of the dataset be contacted (e.g. email address)?**
 
-	*Your Answer Here*
+	PDL can be contacted by filling a form on their website or through this email: support@peopledatalabs.com.
+	Any feedback can be submitted at: success@peopledatalabs.com 
+	People Data Labs' sales team can be contacted [here](https://www.peopledatalabs.com/talk-to-sales).
+	People Data Labs' support team can be contacter [here](https://www.peopledatalabs.com/contact-us)
 
-3. **Is there an erratum?** If so, please provide a link or other access point.
+5. **Is there an erratum?** If so, please provide a link or other access point.
 
-	*Your Answer Here*
+	Yes. The erratum can be found [here](https://docs.peopledatalabs.com/docs/errors).
 
-4. **Will the dataset be updated (e.g. to correct labeling errors, add new instances, delete instances)?** If so, please describe how often, by whom, and how updates will be communicated to users (e.g. mailing list, GitHub)?
+6. **Will the dataset be updated (e.g. to correct labeling errors, add new instances, delete instances)?** If so, please describe how often, by whom, and how updates will be communicated to users (e.g. mailing list, GitHub)?
 
-	*Your Answer Here*
+	The Company dataset is updated monthhly. Every releases goes through a testing framework, where comparisons on every component of the data against the latest release is done to ensure that every change is as expected according to the new sources and code changes.
 
-5. **If the dataset relates to people, are there applicable limits on the retention of the data associated with the instances (e.g. were individuals in question told that their data would be retained for a fixed period of time and then deleted)?** If so, please describe these limits and explain how they will be enforced.
+ 	An online [changelog](https://docs.peopledatalabs.com/changelog) reflects data updates. Further, while deploying an update, PDL APIs typically experience a few minutes of downtime. This is notified to all API customers with an active email a week in advance.
 
-	*Your Answer Here*
+8. **If the dataset relates to people, are there applicable limits on the retention of the data associated with the instances (e.g. were individuals in question told that their data would be retained for a fixed period of time and then deleted)?** If so, please describe these limits and explain how they will be enforced.
 
-6. **Will older versions of the dataset continue to be supported/hosted/maintained?** If so, please describe how. If not, please describe how its obsolescence will be communicated to users.
+	Yes. According to their [Data Retention Policy](https://privacy.peopledatalabs.com/policies?name=privacy-policy#9-data-retention), PDL will store personal data only for as long as necessary, as outlined in its Privacy Policy or as required by the law. The duration may vary depending on specific purposes, including service delivery and legal obligations. PDL will also comply with any special regulations regarding data retention. Data will be deleted when it's no longer needed.
 
-	*Your Answer Here*
+10. **Will older versions of the dataset continue to be supported/hosted/maintained?** If so, please describe how. If not, please describe how its obsolescence will be communicated to users.
 
-7. **If others want to extend/augment/build on/contribute to the dataset, is there a mechanism for them to do so?** If so, please provide a description. Will these contributions be validated/verified? If so, please describe how. If not, why not? Is there a process for communicating/distributing these contributions to other users? If so, please provide a description.
+	No. According to PDL, each version of the APIs will use the most up-to-date data release. 
 
-	*Your Answer Here*
+11. **If others want to extend/augment/build on/contribute to the dataset, is there a mechanism for them to do so?** If so, please provide a description. Will these contributions be validated/verified? If so, please describe how. If not, why not? Is there a process for communicating/distributing these contributions to other users? If so, please provide a description.
+
+	No. PDL is a private software company. Moreover, it is not open-source and does not allow for others to contribute to the dataset. 
 
