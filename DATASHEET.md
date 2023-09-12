@@ -11,7 +11,7 @@ Organization: *University of California, Berkeley*
 
 1. **For what purpose was the Company Dataset created?** Was there a specific task in mind? Was there a specific gap that needed to be filled? Please provide a description.
 
-	The Company Dataset was created for companies and individuals to analyze over 12 million records of company data. Though the specific usecase depends on the goals of the organization or the individual, there are a number of possible ways to use this dataset namely: sales & marketing, company prospecting, fraud prevention, identity resolution and investment research.
+	The Company Dataset was created for companies and individuals to analyze over 29 million records of company data. Though the specific usecase depends on the goals of the organization or the individual, there are a number of possible ways to use this dataset namely: sales & marketing, company prospecting, fraud prevention, identity resolution and investment research.
 
 2. **Who created this dataset (e.g. which team, research group) and on behalf of which entity (e.g. company, institution, organization)**?
 
