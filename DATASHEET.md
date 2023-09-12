@@ -279,12 +279,12 @@ Though official numbers have not been published, according to Glassdoor, PDL dat
 
 	Yes.
 
-	Every attribute in their dataset undergoes a baseline cleaning step. This could either be in the form of converting all values to lowercase and removing extra whitespaces, or validating that the data follows a specific format such as email addresses.
+	Every attribute in their dataset undergoes a baseline cleaning step[11]. This could either be in the form of converting all values to lowercase and removing extra whitespaces, or validating that the data follows a specific format such as email addresses.
 	
 	After sourcing raw data from various different sources, PDL standardizes the data format and merges duplicate records together.
-	Standardizing of data is done so as to seamlessly integrate new sources of data and provides customers an easy way to understand and consume the dataset. 
+	Standardizing of data is done so as to seamlessly integrate new sources of data and provides customers an easy way to understand and consume the dataset.[11]
 	
-	After standardizing the dataset, PDL performs de-duplication or entity resolution to check whether to create a new record or merge to an existing record when a new chunk of data is ingested. This is done by creating blocks of data sharing a common key and sorting on it. Each new record is compared against this block. Two techniques are employed to determine whether or not a merge is required: deterministic and probabilistic methods.
+	After standardizing the dataset, PDL performs de-duplication or entity resolution[11] to check whether to create a new record or merge to an existing record when a new chunk of data is ingested. This is done by creating blocks of data sharing a common key and sorting on it. Each new record is compared against this block. Two techniques are employed to determine whether or not a merge is required: deterministic and probabilistic methods.
 	
 	Finally,  PDL generates aggregations and derived data fields to establish trends on the movement of people, such as hires and quits to and from various locations and companies. These processes yield valuable insights into historical trends.
 
@@ -294,7 +294,7 @@ Though official numbers have not been published, according to Glassdoor, PDL dat
 
 4. **Is the software used to preprocess/clean/label the instances available?** If so, please provide a link or other access point.
 
-	No, this software is not open source. 
+	No, this software is not open source and is not made available publicly. 
 
 ## Uses
 
@@ -302,9 +302,9 @@ Though official numbers have not been published, according to Glassdoor, PDL dat
 
 1. **Has the dataset been used for any tasks already?** If so, please provide a description.
 
-	The Company Dataset has primarily been used in B2B contexts. Companies such as Madison Logic, Cisco, Qualcomm, Signal Fire, Kleiner Perkins, General Catalyst have used their Company as well as Person datasets.
+	The Company Dataset has primarily been used in B2B contexts. Companies such as Madison Logic, Cisco, Qualcomm, Signal Fire, Kleiner Perkins, General Catalyst have used their Company as well as Person datasets.[13]
 
-	Madison Logic has leveraged this dataset as a means to facilitate their clients' engagement with a broader range of individuals and businesses actively seeking their services. To achieve this goal, they required access to data that not only expanded their overall profile database but also enabled their clients to gain a comprehensive insight into the attributes of the individuals they sought to connect with, as well as the organizations they were affiliated with. The PDL datasets powered this solution, providing faster throughputs and enriching the information they already had with up-to-date data.  
+	Madison Logic has leveraged this dataset as a means to facilitate their clients' engagement with a broader range of individuals and businesses actively seeking their services. To achieve this goal, they required access to data that not only expanded their overall profile database but also enabled their clients to gain a comprehensive insight into the attributes of the individuals they sought to connect with, as well as the organizations they were affiliated with. The PDL datasets powered this solution, providing faster throughputs and enriching the information they already had with up-to-date data.[14]  
 
 3. **Is there a repository that links to any or all papers or systems that use the dataset?** If so, please provide a link or other access point.
 
@@ -314,7 +314,7 @@ Though official numbers have not been published, according to Glassdoor, PDL dat
 
 	PDL is built on Elasticsearch. They have created APIs on top of this dataset for consumers to able to access it programatically. PDL datasets are also integrated into AWS, Snowflake, Databricks, Salesforce and several other platforms. 600+ companies are currently using PDL datasets. 
 
- 	Some of the ways that Company data can and have been used are:  
+ 	Some of the ways that Company data can and have been used are[1]:  
 	1. *Fraud Detection*: People Data Labs collaborated with an enterprise vendor, enhancing their verification and fraud detection capabilities. They used PDL data via their APIs to connect credit applicants' personal information with their professional background, simplifying the verification process.
  	2. *Investment Intelligence*: PDL data can help manage investment portfolios, assess changes in company headcounts, and enhance your comprehension of the org chart of a particular organization. It can also help make informed investment decisions by analyzing the financial performance, revenue, and profitability of publicly traded companies with a ticker symbol.  
 	3. *Sales and Marketing*: The Company Dataset can be used to generate leads for sales and marketing campaigns by targeting companies that match specific criteria, such as industry, location, or size. Segment potential customers based on company attributes.  
@@ -324,7 +324,7 @@ Though official numbers have not been published, according to Glassdoor, PDL dat
 
 	Likely no.
 
-	To ensure compliance with various privacy regulations, PDL refrains from using or disclosing the following categories of sensitive personal data:	
+	According to the[services subscription agreement](https://privacy.peopledatalabs.com/policies?name=privacy-center), in order to ensure compliance with various privacy regulations, PDL refrains from using or disclosing the following categories of sensitive personal data:	
 	- Racial or ethnic origin
 	- Political opinions (including party affiliation)
 	- Religious or philosophical beliefs
@@ -354,7 +354,7 @@ Though official numbers have not been published, according to Glassdoor, PDL dat
 
 1. **Will the dataset be distributed to third parties outside of the entity (e.g. company, institution, organization) on behalf of which the dataset was created?** If so, please provide a description.
 
-	Yes. PDL is a B2B company data provider. The Company and Person datasets are made available through Free, Pro and Enterprise plans. The Free plan provides customers with about 100 records per month. The Pro plans start at $100 and provide users with 350 records. The Enterprise plan has custom pricing and provides users unrestricted access to all fields with unlimited record access. 
+	Yes. PDL is a B2B company data provider. The Company and Person datasets are made available through Free, Pro and Enterprise plans. The Free plan provides customers with about 100 records per month. The Pro plans start at $100 and provide users with 350 records. The Enterprise plan has custom pricing and provides users unrestricted access to all fields with unlimited record access.[15]  
 
 2. **How will the dataset will be distributed (e.g. tarball on website, API, GitHub)?** Does the dataset have a digital object identifier (DOI)?
 
@@ -390,7 +390,7 @@ Though official numbers have not been published, according to Glassdoor, PDL dat
 
 5. **Will the dataset be distributed under a copyright or other intellectual property (IP) license, and/or under applicable terms of use (ToU)?** If so, please describe this license and/or ToU, and provide a link or other access point to, or otherwise reproduce, any relevant licensing terms or ToU, as well as any fees associated with these restrictions.
 
-	Yes, People Data Labs enters into an agreement describing the terms under which they will make services available to their customers. They call this the "Services Subscription Agreement".
+	Yes, People Data Labs enters into an agreement describing the terms under which they will make services available to their customers. They call this the ["Services Subscription Agreement"](https://www.peopledatalabs.com/pricing/person).
 
  	Some of the relevant terms and conditons are:  
    	1. *Customer Restrictions*
@@ -408,12 +408,12 @@ Though official numbers have not been published, according to Glassdoor, PDL dat
 
 7. **Have any third parties imposed IP-based or other restrictions on the data associated with the instances?** If so, please describe these restrictions, and provide a link or other access point to, or otherwise reproduce, any relevant licensing terms, as well as any fees associated with these restrictions.
 
-	Likely no. However, according to the Services Subscription Agreement, PDL imposes IP rights on its customers.  
+	Likely no. However, according to the [Services Subscription Agreement](https://www.peopledatalabs.com/pricing/person), PDL imposes IP rights on its customers.  
 "The Customer agrees that People Data Labs owns all intellectual property rights and all other proprietary interests that are embodied in or practiced by the Services and all Data or information contained in or derived from the Services (other than Customer Data as defined below). People Data Labs grants no rights other than the rights expressly granted to Customer under this Agreement."
 
 9. **Do any export controls or other regulatory restrictions apply to the dataset or to individual instances?** If so, please describe these restrictions, and provide a link or other access point to, or otherwise reproduce, any supporting documentation.
 
-	Yes. A clause in the Services Subscription Agreement allows for changes to the agreement if the government or a court makes new rules that affect the agreement's cost or terms. If the parties can't agree on the changes, they can choose to end the affected part of the agreement.  
+	Yes. A clause in the [Services Subscription Agreement](https://www.peopledatalabs.com/pricing/person) allows for changes to the agreement if the government or a court makes new rules that affect the agreement's cost or terms. If the parties can't agree on the changes, they can choose to end the affected part of the agreement.  
 
  	Further to this, there are export controls on the dataset, which require that the customer does not send any information to PDL that they got from countries that are under trade restrictions: Venezuela, China, Russia, Iran, Ethiopia, Lebanon, Zimbabwe, Iraq, Nicaragua, Democratic Republic of Congo, Cuba, Afghanistan, Sudan, Syria, Mali, Somalia, Libya, Yemen, Central African Republic, South Sudan, North Korea, and Belarus (“Embargoed/Sanctioned Countries”). The customer is also to promise that the information they send to PDL does not come from people or organizations that are on a list of individuals and groups the U.S. government has restricted.
 
@@ -423,8 +423,7 @@ Though official numbers have not been published, according to Glassdoor, PDL dat
 
 1. **Who is supporting/hosting/maintaining the dataset?**
 
-	The PDL Company Dataset is maintained by employees at People Data Labs.
-This data is  
+	The PDL Company Dataset is maintained by employees at People Data Labs in an Elasticsearch database.
 
 3. **How can the owner/curator/manager of the dataset be contacted (e.g. email address)?**
 
@@ -459,16 +458,18 @@ However, in case of backwards-incompatible changes, PDL will create a new versio
 
 ---
 ## References 
-[1] https://www.peopledatalabs.com/company-data
-[2] https://www.peopledatalabs.com/about
-[3] https://www.peopledatalabs.com/person-data
-[4] Statista Research Department. Jun 7, 2023. Estimated number of companies worldwide from 2000 to 2021. https://www.statista.com/statistics/1260686/global-companies/ 
-[5] https://docs.peopledatalabs.com/docs/company-data-overview
-[6] https://docs.peopledatalabs.com/docs/person-data-overview
-[7] https://docs.peopledatalabs.com/docs/company-stats
-[8] https://docs.peopledatalabs.com/docs/datasets
-[9] https://docs.peopledatalabs.com/docs/data-accuracy
-[10] https://www.peopledatalabs.com/pdf/privacy-security-overview.pdf
-[11] https://pages.peopledatalabs.com/rs/079-FMM-907/images/Our%20Data%20Build%20Process.pdf
-[12] https://www.glassdoor.com/Salary/People-Data-Labs-Engineering-Salaries-EI_IE2312757.0,16_DEPT1007.htm
-[13] 
+[1] https://www.peopledatalabs.com/company-data  
+[2] https://www.peopledatalabs.com/about  
+[3] https://www.peopledatalabs.com/person-data  
+[4] Statista Research Department. Jun 7, 2023. Estimated number of companies worldwide from 2000 to 2021.   https://www.statista.com/statistics/1260686/global-companies/  
+[5] https://docs.peopledatalabs.com/docs/company-data-overview  
+[6] https://docs.peopledatalabs.com/docs/person-data-overview  
+[7] https://docs.peopledatalabs.com/docs/company-stats  
+[8] https://docs.peopledatalabs.com/docs/datasets  
+[9] https://docs.peopledatalabs.com/docs/data-accuracy  
+[10] https://www.peopledatalabs.com/pdf/privacy-security-overview.pdf  
+[11] https://pages.peopledatalabs.com/rs/079-FMM-907/images/Our%20Data%20Build%20Process.pdf  
+[12] https://www.glassdoor.com/Salary/People-Data-Labs-Engineering-Salaries-EI_IE2312757.0,16_DEPT1007.htm  
+[13] https://www.peopledatalabs.com/customers
+[14] https://www.peopledatalabs.com/resources/data-enrichment
+[15] https://www.peopledatalabs.com/pricing/person
