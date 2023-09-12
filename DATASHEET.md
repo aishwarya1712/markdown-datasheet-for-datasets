@@ -209,10 +209,6 @@ A slice is a subset of PDL's Person Dataset that contains every record with non-
 
 	Likely yes. Though these datasets do not disclose the exact address, it does contain the location that the person/contact is headquartered in.
 
-26. **Any other comments?**
-
-	*Your Answer Here*
-
 
 ## Collection
 
@@ -277,10 +273,6 @@ Though official numbers have not been published, according to Glassdoor, PDL dat
 
 	This is unknown. My take is that such an analysis has probably not been performed. 
 
-18. **Any other comments?**
-
-	*Your Answer Here*
-
 
 ## Preprocessing / Cleaning / Labeling
 
@@ -295,7 +287,9 @@ Every attribute in their dataset undergoes a baseline cleaning step. This could 
 After sourcing raw data from various different sources, PDL standardizes the data format and merges duplicate records together.
 Standardizing of data is done so as to seamlessly integrate new sources of data and provides customers an easy way to understand and consume the dataset. 
 
-After standardizing the dataset, PDL performs de-duplication or entity resolution to check whether to create a new record or merge to an existing record when a new chunk of data is ingested. This is done by creating blocks of data sharing a common key and sorting on it. Each new record is compared against this block. Finally, two techniques are employed to determine whether or not a merge is required: deterministic and probabilistic methods.
+After standardizing the dataset, PDL performs de-duplication or entity resolution to check whether to create a new record or merge to an existing record when a new chunk of data is ingested. This is done by creating blocks of data sharing a common key and sorting on it. Each new record is compared against this block. Two techniques are employed to determine whether or not a merge is required: deterministic and probabilistic methods.
+
+Finally,  PDL generates aggregations and derived data fields to establish trends on the movement of people, such as hires and quits to and from various locations and companies. These processes yield valuable insights into historical trends.
 
 3. **Was the "raw" data saved in addition to the preprocessed/cleaned/labeled data (e.g. to support unanticipated future uses)?** If so, please provide a link or other access point to the "raw" data.
 
@@ -304,11 +298,6 @@ After standardizing the dataset, PDL performs de-duplication or entity resolutio
 4. **Is the software used to preprocess/clean/label the instances available?** If so, please provide a link or other access point.
 
 	No, this software is not open source. 
-
-5. **Any other comments?**
-
-	*Your Answer Here*
-
 
 ## Uses
 
@@ -331,17 +320,14 @@ After standardizing the dataset, PDL performs de-duplication or entity resolutio
  	Some of the ways that Company data can and have been used are:  
 	1. *Fraud Detection*: People Data Labs collaborated with an enterprise vendor, enhancing their verification and fraud detection capabilities. They used PDL data via their APIs to connect credit applicants' personal information with their professional background, simplifying the verification process.
  	2. *Investment Intelligence*: PDL data can help manage investment portfolios, assess changes in company headcounts, and enhance your comprehension of the org chart of a particular organization. It can also help make informed investment decisions by analyzing the financial performance, revenue, and profitability of publicly traded companies with a ticker symbol.  
-	3. *Lead Generation and Company Prospecting*: The Company Dataset can be used to generate leads for sales and marketing campaigns by targeting companies that match specific criteria, such as industry, location, or size. Segment potential customers based on company attributes.
+	3. *Sales and Marketing*: The Company Dataset can be used to generate leads for sales and marketing campaigns by targeting companies that match specific criteria, such as industry, location, or size. Segment potential customers based on company attributes.  
+	4. *Competitive Intelligence*: PDL data can be used to predict a company's potential competitors or peers within specific industries. This can be achieved by analyzing their financial data, employee count, and market presence. Alternatively, it can also be used to identify potential partners for mergers and acquisitions. 
 
 6. **Is there anything about the composition of the dataset or the way it was collected and preprocessed/cleaned/labeled that might impact future uses?** For example, is there anything that a future user might need to know to avoid uses that could result in unfair treatment of individuals or groups (e.g. stereotyping, quality of service issues) or other undesirable harms (e.g. financial harms, legal risks) If so, please provide a description. Is there anything a future user could do to mitigate these undesirable harms?
 
 	*Your Answer Here*
 
 7. **Are there tasks for which the dataset should not be used?** If so, please provide a description.
-
-	*Your Answer Here*
-
-8. **Any other comments?**
 
 	*Your Answer Here*
 
@@ -352,32 +338,67 @@ After standardizing the dataset, PDL performs de-duplication or entity resolutio
 
 1. **Will the dataset be distributed to third parties outside of the entity (e.g. company, institution, organization) on behalf of which the dataset was created?** If so, please provide a description.
 
-	*Your Answer Here*
+	Yes. PDL is a B2B company. The Company and Person datasets are made available through Free, Pro and Enterprise plans. The Free plan provides customers with about 100 records per month. The Pro plans start at $100 and provide users with 350 records. The Enterprise plan has custom pricing and provides users unrestricted access to all fields with unlimited record access. 
 
 2. **How will the dataset will be distributed (e.g. tarball on website, API, GitHub)?** Does the dataset have a digital object identifier (DOI)?
 
-	*Your Answer Here*
+	The datasets is distributed through APIs.
 
-3. **When will the dataset be distributed?**
+* Company Dataset *
+Endpoint: POST https://api.peopledatalabs.com/v5/company/search  
+Required input: query=<query>  
+Output: contains the response code, the data and total number of records.  
+Example: POST https://api.peopledatalabs.com/v5/company/search  
+	{"query": {"term": {"name": "starbucks"}}}
+This will return all the companies having "starbucks" in their name.  
 
-	*Your Answer Here*
+ * Person Dataset *
+Endpoint: POST https://api.peopledatalabs.com/v5/person/search
+Required input: query=<query>  
+Output: contains the response code, the data and total number of records.  
+Example: POST https://api.peopledatalabs.com/v5/company/search  
+	{"query": {"term": {"job_company_name": "starbucks"}}}
+This will return all the people working at a company that has "starbucks" in its name.
 
-4. **Will the dataset be distributed under a copyright or other intellectual property (IP) license, and/or under applicable terms of use (ToU)?** If so, please describe this license and/or ToU, and provide a link or other access point to, or otherwise reproduce, any relevant licensing terms or ToU, as well as any fees associated with these restrictions.
+Other than the required inputs, the API takes optional parameters such as:  
+	sql: to provide the query in SQL  
+ 	size: The batch size or the maximum number of matched records to return for this query if they exist, which must be between 1 and 100.  
+  	api_key: the secret API key  
+   	dataset: comma-separated fields to be returned by the API
 
-	*Your Answer Here*
+ 
+4. **When will the dataset be distributed?**
 
-5. **Have any third parties imposed IP-based or other restrictions on the data associated with the instances?** If so, please describe these restrictions, and provide a link or other access point to, or otherwise reproduce, any relevant licensing terms, as well as any fees associated with these restrictions.
+	The dataset is already being distributed by PDL to other companies and individuals. This can be obtained as part of the Free plan, Pro plan or Enterprise plan. Each plan has different prices and usage limits as set by PDL. 
 
-	*Your Answer Here*
+5. **Will the dataset be distributed under a copyright or other intellectual property (IP) license, and/or under applicable terms of use (ToU)?** If so, please describe this license and/or ToU, and provide a link or other access point to, or otherwise reproduce, any relevant licensing terms or ToU, as well as any fees associated with these restrictions.
 
-6. **Do any export controls or other regulatory restrictions apply to the dataset or to individual instances?** If so, please describe these restrictions, and provide a link or other access point to, or otherwise reproduce, any supporting documentation.
+	Yes, People Data Labs enters into an agreement describing the terms under which they will make services available to their customers. They call this the "Services Subscription Agreement".
 
-	*Your Answer Here*
+ 	Some of the relevant terms and conditons are:  
+   	1. *Customer Restrictions*
 
-7. **Any other comments?**
+		Customer shall not, and shall not permit its clients to:
+	
+		1. Resell, sublicense, distribute or otherwise provide access to the Services, Data, or information contained in or derived from the Services, to any third party or use the Services outside the scope of the license granted herein.
+		
+		2. Copy, modify, adapt, translate, prepare derivative works from, reverse engineer, disassemble, or decompile the Services or otherwise attempt to discover any source code or trade secrets related to the Services.
+		
+		3. Use the trademarks, trade names, service marks, logos, domain names and other distinctive brand features or any copyright or other proprietary rights associated with the Services for any purpose without the express written consent of People Data Labs.  
+   	2. *Fees*: Customers agree to pay in accordance with the rates listed within Customer Account, unless otherwise set forth in an Order Form between the parties.
 
-	*Your Answer Here*
+    	More information can be found [here](https://privacy.peopledatalabs.com/policies?name=services-subscription-agreement).
 
+7. **Have any third parties imposed IP-based or other restrictions on the data associated with the instances?** If so, please describe these restrictions, and provide a link or other access point to, or otherwise reproduce, any relevant licensing terms, as well as any fees associated with these restrictions.
+
+	Likely no. However, according to the Services Subscription Agreement, PDL imposes IP rights on its customers.  
+"The Customer agrees that People Data Labs owns all intellectual property rights and all other proprietary interests that are embodied in or practiced by the Services and all Data or information contained in or derived from the Services (other than Customer Data as defined below). People Data Labs grants no rights other than the rights expressly granted to Customer under this Agreement."
+
+9. **Do any export controls or other regulatory restrictions apply to the dataset or to individual instances?** If so, please describe these restrictions, and provide a link or other access point to, or otherwise reproduce, any supporting documentation.
+
+	Yes. A clause in the Services Subscription Agreement allows for changes to the agreement if the government or a court makes new rules that affect the agreement's cost or terms. If the parties can't agree on the changes, they can choose to end the affected part of the agreement.  
+
+ 	Further to this, there are export controls on the dataset, which require that the customer does not send any information to PDL that they got from countries that are under trade restrictions: Venezuela, China, Russia, Iran, Ethiopia, Lebanon, Zimbabwe, Iraq, Nicaragua, Democratic Republic of Congo, Cuba, Afghanistan, Sudan, Syria, Mali, Somalia, Libya, Yemen, Central African Republic, South Sudan, North Korea, and Belarus (“Embargoed/Sanctioned Countries”). The customer is also to promise that the information they send to PDL does not come from people or organizations that are on a list of individuals and groups the U.S. government has restricted.
 
 ## Maintenance
 
@@ -411,6 +432,3 @@ After standardizing the dataset, PDL performs de-duplication or entity resolutio
 
 	*Your Answer Here*
 
-8. **Any other comments?**
-
-	*Your Answer Here*
