@@ -240,7 +240,7 @@ Though official numbers have not been published, according to Glassdoor, PDL dat
 
 9. **Were any ethical review processes conducted (e.g. by an institutional review board)?** If so, please provide a description of these review processes, including the outcomes, as well as a link or other access point to any supporting documentation.
 
-	*Your Answer Here*
+	Likely no. 
 
 10. **Does the dataset relate to people?** If not, you may skip the remainder of the questions in this section.
 
@@ -263,9 +263,9 @@ Though official numbers have not been published, according to Glassdoor, PDL dat
 15. **If consent was obtained, were the consenting individuals provided with a mechanism to revoke their consent in the future or for certain uses?** If so, please provide a description, as well as a link or other access point to the mechanism (if appropriate).
 
 	Yes, PDL honours opt-outs, i.e it allows for individuals to revoke their consent in the future. They claim that these requests are built into our engineering workflows.
-	This is the [link](https://www.peopledatalabs.com/privacy/my-privacy-choices) to optout.
-	Data can be requested [here](https://www.peopledatalabs.com/privacy/data-request-form).
-	For any other info, PDL recommends emailing them at privacy@peopledatalabs.com. 
+	This is the [link](https://www.peopledatalabs.com/privacy/my-privacy-choices) to optout.  
+	Data can be requested [here](https://www.peopledatalabs.com/privacy/data-request-form).  
+	For any other info, PDL recommends emailing them at privacy@peopledatalabs.com.  
 
 17. **Has an analysis of the potential impact of the dataset and its use on data subjects (e.g. a data protection impact analysis) been conducted?** If so, please provide a description of this analysis, including the outcomes, as well as a link or other access point to any supporting documentation.
 
@@ -325,8 +325,7 @@ Finally,  PDL generates aggregations and derived data fields to establish trends
 
 	Likely no.
 
-	To ensure compliance with various privacy regulations, PDL refrains from using or disclosing the following categories of sensitive personal data:
-	
+	To ensure compliance with various privacy regulations, PDL refrains from using or disclosing the following categories of sensitive personal data:	
 	- Racial or ethnic origin
 	- Political opinions (including party affiliation)
 	- Religious or philosophical beliefs
@@ -348,8 +347,7 @@ Finally,  PDL generates aggregations and derived data fields to establish trends
 
 8. **Are there tasks for which the dataset should not be used?** If so, please provide a description.
 
-	*Your Answer Here*
-
+	Yes. They Company Dataset should not be used for spamming, phishing, defaming, or other unethical marketing practices that violate regulations and damage the reputation of companies. 
 
 ## Distribution
 
