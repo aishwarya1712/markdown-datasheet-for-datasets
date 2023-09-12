@@ -438,7 +438,7 @@ Though official numbers have not been published, according to Glassdoor, PDL dat
 
 6. **Will the dataset be updated (e.g. to correct labeling errors, add new instances, delete instances)?** If so, please describe how often, by whom, and how updates will be communicated to users (e.g. mailing list, GitHub)?
 
-	The Company dataset is updated monthhly. Every releases goes through a testing framework, where comparisons on every component of the data against the latest release is done to ensure that every change is as expected according to the new sources and code changes.
+	The Company dataset is updated monthly. Every releases goes through a testing framework, where comparisons on every component of the data against the latest release is done to ensure that every change is as expected according to the new sources and code changes.[16]
 
  	An online [changelog](https://docs.peopledatalabs.com/changelog) reflects data updates. Further, while deploying an update, PDL APIs typically experience a few minutes of downtime. This is notified to all API customers with an active email a week in advance.
 
@@ -449,15 +449,15 @@ Though official numbers have not been published, according to Glassdoor, PDL dat
 10. **Will older versions of the dataset continue to be supported/hosted/maintained?** If so, please describe how. If not, please describe how its obsolescence will be communicated to users.
 
 	No and yes.
-According to PDL, the APIs will always use the most up-to-date data release. 
-However, in case of backwards-incompatible changes, PDL will create a new version of the API that users must upgrade to. 
+According to PDL, the APIs will always use the most up-to-date data release.
+However, in case of backwards-incompatible changes, PDL will create a new version of the API that users must upgrade to.[17]  
 
 12. **If others want to extend/augment/build on/contribute to the dataset, is there a mechanism for them to do so?** If so, please provide a description. Will these contributions be validated/verified? If so, please describe how. If not, why not? Is there a process for communicating/distributing these contributions to other users? If so, please provide a description.
 
 	No. PDL is a private software company. Moreover, it is not open-source and does not allow for others to contribute to the dataset. 
 
 ---
-## References 
+## Links and References 
 [1] https://www.peopledatalabs.com/company-data  
 [2] https://www.peopledatalabs.com/about  
 [3] https://www.peopledatalabs.com/person-data  
@@ -473,3 +473,5 @@ However, in case of backwards-incompatible changes, PDL will create a new versio
 [13] https://www.peopledatalabs.com/customers
 [14] https://www.peopledatalabs.com/resources/data-enrichment
 [15] https://www.peopledatalabs.com/pricing/person
+[16] https://www.peopledatalabs.com/faqs
+[17] https://docs.peopledatalabs.com/docs/versioning
