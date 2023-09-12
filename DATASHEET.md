@@ -12,7 +12,7 @@ Organization: *University of California, Berkeley*
 1. **For what purpose was the Company Dataset created?** Was there a specific task in mind? Was there a specific gap that needed to be filled? Please provide a description.
 
 	The Company Dataset was created for companies and individuals to analyze over 12 million records of company data. Though the specific usecase depends on the goals of the organization or the individual, there are a number of possible ways to use this dataset namely: sales & marketing, company prospecting, fraud prevention, identity resolution and investment research.
-.
+
 2. **Who created this dataset (e.g. which team, research group) and on behalf of which entity (e.g. company, institution, organization)**?
 
 	This dataset was created by "People Data Labs" (PDL), a software company based on San Francisco, California, co-founded by Sean Thorne and Henry Nevue. The documentation does not specifically mention who was involved in collecting the data.
@@ -280,14 +280,14 @@ Though official numbers have not been published, according to Glassdoor, PDL dat
 
 	Yes.
 
-Every attribute in their dataset undergoes a baseline cleaning step. This could either be in the form of converting all values to lowercase and removing extra whitespaces, or validating that the data follows a specific format such as email addresses.
-
-After sourcing raw data from various different sources, PDL standardizes the data format and merges duplicate records together.
-Standardizing of data is done so as to seamlessly integrate new sources of data and provides customers an easy way to understand and consume the dataset. 
-
-After standardizing the dataset, PDL performs de-duplication or entity resolution to check whether to create a new record or merge to an existing record when a new chunk of data is ingested. This is done by creating blocks of data sharing a common key and sorting on it. Each new record is compared against this block. Two techniques are employed to determine whether or not a merge is required: deterministic and probabilistic methods.
-
-Finally,  PDL generates aggregations and derived data fields to establish trends on the movement of people, such as hires and quits to and from various locations and companies. These processes yield valuable insights into historical trends.
+	Every attribute in their dataset undergoes a baseline cleaning step. This could either be in the form of converting all values to lowercase and removing extra whitespaces, or validating that the data follows a specific format such as email addresses.
+	
+	After sourcing raw data from various different sources, PDL standardizes the data format and merges duplicate records together.
+	Standardizing of data is done so as to seamlessly integrate new sources of data and provides customers an easy way to understand and consume the dataset. 
+	
+	After standardizing the dataset, PDL performs de-duplication or entity resolution to check whether to create a new record or merge to an existing record when a new chunk of data is ingested. This is done by creating blocks of data sharing a common key and sorting on it. Each new record is compared against this block. Two techniques are employed to determine whether or not a merge is required: deterministic and probabilistic methods.
+	
+	Finally,  PDL generates aggregations and derived data fields to establish trends on the movement of people, such as hires and quits to and from various locations and companies. These processes yield valuable insights into historical trends.
 
 3. **Was the "raw" data saved in addition to the preprocessed/cleaned/labeled data (e.g. to support unanticipated future uses)?** If so, please provide a link or other access point to the "raw" data.
 
@@ -361,29 +361,29 @@ Finally,  PDL generates aggregations and derived data fields to establish trends
 
 	The datasets is distributed through APIs or through a license.
 
-* Company Dataset *
-Endpoint: POST https://api.peopledatalabs.com/v5/company/search  
-Required input: query=<query>  
-Output: contains the response code, the data and total number of records.  
-Example: POST https://api.peopledatalabs.com/v5/company/search  
-	{"query": {"term": {"name": "starbucks"}}}
-This will return all the companies having "starbucks" in their name.  
-
- * Person Dataset *
-Endpoint: POST https://api.peopledatalabs.com/v5/person/search
-Required input: query=<query>  
-Output: contains the response code, the data and total number of records.  
-Example: POST https://api.peopledatalabs.com/v5/company/search  
-	{"query": {"term": {"job_company_name": "starbucks"}}}
-This will return all the people working at a company that has "starbucks" in its name.
-
-Other than the required inputs, the API takes optional parameters such as:  
-	sql: to provide the query in SQL  
- 	size: The batch size or the maximum number of matched records to return for this query if they exist, which must be between 1 and 100.  
-  	api_key: the secret API key  
-   	dataset: comma-separated fields to be returned by the API
-
- As for licensing, PDL customers obtain datasets in the form of an annual license. Some customers license our entire dataset while others license custom subsets of the data.
+	* Company Dataset *
+	Endpoint: POST https://api.peopledatalabs.com/v5/company/search  
+	Required input: query=<query>  
+	Output: contains the response code, the data and total number of records.  
+	Example: POST https://api.peopledatalabs.com/v5/company/search  
+		{"query": {"term": {"name": "starbucks"}}}
+	This will return all the companies having "starbucks" in their name.  
+	
+	 * Person Dataset *
+	Endpoint: POST https://api.peopledatalabs.com/v5/person/search
+	Required input: query=<query>  
+	Output: contains the response code, the data and total number of records.  
+	Example: POST https://api.peopledatalabs.com/v5/company/search  
+		{"query": {"term": {"job_company_name": "starbucks"}}}
+	This will return all the people working at a company that has "starbucks" in its name.
+	
+	Other than the required inputs, the API takes optional parameters such as:  
+		sql: to provide the query in SQL  
+	 	size: The batch size or the maximum number of matched records to return for this query if they exist, which must be between 1 and 100.  
+	  	api_key: the secret API key  
+	   	dataset: comma-separated fields to be returned by the API
+	
+	 As for licensing, PDL customers obtain datasets in the form of an annual license. Some customers license our entire dataset while others license custom subsets of the data.
  
 4. **When will the dataset be distributed?**
 
