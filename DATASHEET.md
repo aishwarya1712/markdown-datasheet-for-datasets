@@ -263,7 +263,9 @@ Though official numbers have not been published, according to Glassdoor, PDL dat
 15. **If consent was obtained, were the consenting individuals provided with a mechanism to revoke their consent in the future or for certain uses?** If so, please provide a description, as well as a link or other access point to the mechanism (if appropriate).
 
 	Yes, PDL honours opt-outs, i.e it allows for individuals to revoke their consent in the future. They claim that these requests are built into our engineering workflows.
-	This is the [link](https://blog.peopledatalabs.com/post/how-people-data-labs-sources-data).
+	This is the [link](https://www.peopledatalabs.com/privacy/my-privacy-choices) to optout.
+	Data can be requested [here](https://www.peopledatalabs.com/privacy/data-request-form).
+	For any other info, PDL recommends emailing them at privacy@peopledatalabs.com. 
 
 17. **Has an analysis of the potential impact of the dataset and its use on data subjects (e.g. a data protection impact analysis) been conducted?** If so, please provide a description of this analysis, including the outcomes, as well as a link or other access point to any supporting documentation.
 
@@ -311,7 +313,7 @@ Finally,  PDL generates aggregations and derived data fields to establish trends
 
 4. **What (other) tasks could the dataset be used for?**
 
-	PDL is built on Elasticsearch. They have created APIs on top of this dataset for consumers to able to access it programatically. PDL datasets are also integrated into AWS, Snowflake, Databricks, Salesforce and several other platforms.
+	PDL is built on Elasticsearch. They have created APIs on top of this dataset for consumers to able to access it programatically. PDL datasets are also integrated into AWS, Snowflake, Databricks, Salesforce and several other platforms. 600+ companies are currently using PDL datasets. 
 
  	Some of the ways that Company data can and have been used are:  
 	1. *Fraud Detection*: People Data Labs collaborated with an enterprise vendor, enhancing their verification and fraud detection capabilities. They used PDL data via their APIs to connect credit applicants' personal information with their professional background, simplifying the verification process.
@@ -321,9 +323,30 @@ Finally,  PDL generates aggregations and derived data fields to establish trends
 
 6. **Is there anything about the composition of the dataset or the way it was collected and preprocessed/cleaned/labeled that might impact future uses?** For example, is there anything that a future user might need to know to avoid uses that could result in unfair treatment of individuals or groups (e.g. stereotyping, quality of service issues) or other undesirable harms (e.g. financial harms, legal risks) If so, please provide a description. Is there anything a future user could do to mitigate these undesirable harms?
 
-	*Your Answer Here*
+	Likely no.
 
-7. **Are there tasks for which the dataset should not be used?** If so, please provide a description.
+	To ensure compliance with various privacy regulations, PDL refrains from using or disclosing the following categories of sensitive personal data:
+	
+	- Racial or ethnic origin
+	- Political opinions (including party affiliation)
+	- Religious or philosophical beliefs
+	- Trade union membership
+	- Citizenship
+	- Genetic data (including other health-related data such as disability or treatment)
+	- Biometric data (including face, iris, palm, voice, fingerprint, etc.)
+	- Children under 18 years of age (The organization does not knowingly retain data of individuals under 18)
+	- Sexual orientation or sexual preferences
+	- Status as transgender or nonbinary
+	- Status as a victim of a crime
+	- Precise location data (typically defined as lat/long to more than 2 decimal points)
+	- Contents of private communications such as emails, texts, voice calls, etc. (unless the organization is the intended recipient)
+	- Financial account or payment card information when combined with authentication information
+	- Device identifier (e.g., IMEI) as per jurisdictional requirements
+	- Government Identifiers such as SSN, Driver's License, or any other unique personal identifier assigned by a government to individuals
+	- Inferences based on personal data, either alone or in conjunction with other data, indicating any of the aforementioned sensitive personal data categories
+
+
+8. **Are there tasks for which the dataset should not be used?** If so, please provide a description.
 
 	*Your Answer Here*
 
@@ -429,9 +452,11 @@ This data is
 
 10. **Will older versions of the dataset continue to be supported/hosted/maintained?** If so, please describe how. If not, please describe how its obsolescence will be communicated to users.
 
-	No. According to PDL, each version of the APIs will use the most up-to-date data release. 
+	No and yes.
+According to PDL, the APIs will always use the most up-to-date data release. 
+However, in case of backwards-incompatible changes, PDL will create a new version of the API that users must upgrade to. 
 
-11. **If others want to extend/augment/build on/contribute to the dataset, is there a mechanism for them to do so?** If so, please provide a description. Will these contributions be validated/verified? If so, please describe how. If not, why not? Is there a process for communicating/distributing these contributions to other users? If so, please provide a description.
+12. **If others want to extend/augment/build on/contribute to the dataset, is there a mechanism for them to do so?** If so, please provide a description. Will these contributions be validated/verified? If so, please describe how. If not, why not? Is there a process for communicating/distributing these contributions to other users? If so, please provide a description.
 
 	No. PDL is a private software company. Moreover, it is not open-source and does not allow for others to contribute to the dataset. 
 
